@@ -17,6 +17,16 @@ module.exports = (error, req, res, next)=>{
             const message =` Authentication failed against database server at {database_host}` ;
             err = new ErrorHandler(message, 400);
         }
+
+        console.log("ig ot ", err.code);
+
+        if (err.code === 'P2002') {
+        console.log("i wan tto say this error eoro");
+
+            const message = 
+              'There is a unique constraint violation, a new user cannot be created with this email'
+              err = new ErrorHandler(message, 400);   
+        }
         if(err.code === 'P1008'){
             const message =` Operations timed out after {time}` ;
             err = new ErrorHandler(message, 400);
@@ -44,10 +54,10 @@ module.exports = (error, req, res, next)=>{
         err = new ErrorHandler(message, 400)
     }
 
-    res.statusCode(err.statusCode).json({
+    res.status(err.statusCode).json({
         success: false,
-        message: err.message
-    })
+        message: err.message,
+    });
 }
 
 

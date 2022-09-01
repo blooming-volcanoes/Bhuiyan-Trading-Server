@@ -10,15 +10,16 @@ const app = require('express')();
 const port = process.env.PORT || 3000;
 
 // middleware
-// const errorMiddleware = require('./middleware/error');
+const errorMiddleware = require('./middleware/error');
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // connect with MySql DB
-const userRoutes = require('./controller/userController');
+const userRoutes = require('./routes/userRoute');
 app.use('/user', userRoutes)
+
 
 // Socket
 const http = require('http').createServer(app);
@@ -37,7 +38,7 @@ app.get('/', (req, res) => {
     res.send('hello');
 });
 
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 
 http.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
