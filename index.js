@@ -26,9 +26,6 @@ const http = require('http').createServer(app);
 
 
 
-
-
-
 app.get('/hi', (req, res) => {
     res.send('hi');
     console.log('Hi');
