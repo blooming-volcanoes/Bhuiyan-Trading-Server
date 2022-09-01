@@ -17,7 +17,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // connect with MySql DB
-
+const userRoutes = require('./controller/userController');
+app.use('/user', userRoutes)
 
 // Socket
 const http = require('http').createServer(app);
