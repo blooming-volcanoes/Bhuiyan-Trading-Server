@@ -71,5 +71,6 @@ if (!isPasswordMatched) {
 }
 
 
+sendToken(user, res, 200);
 
 })
