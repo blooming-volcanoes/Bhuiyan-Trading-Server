@@ -18,7 +18,29 @@ model User {
 }
 
 model Category {
-  id              Int    @id @default(autoincrement())
-  categoryName    String @unique
+  id              Int      @id @default(autoincrement())
+  categoryName    String   @unique
   subCategoryName String
+  product         Product? @relation(fields: [productId], references: [id])
+  productId       Int?
+}
+
+model Product {
+  id          Int        @id @default(autoincrement())
+  title       String
+  price       String
+  currency    String
+  unit        String
+  shortDesc   String
+  ProductDesc String
+  FeatureImg  String?
+  ProductImgs Gallery[]
+  categoryId  Category[]
+}
+
+model Gallery {
+  id         Int      @id @default(autoincrement())
+  imgLink    String
+  productImg Product? @relation(fields: [productId], references: [id])
+  productId  Int?
 }
