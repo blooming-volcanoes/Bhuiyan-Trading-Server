@@ -19,8 +19,10 @@ app.use(express.urlencoded({ extended: true }));
 // connect with MySql DB
 const userRoutes = require('./routes/userRoute');
 const categoryRoutes = require('./routes/categoryRoute');
+const productRoute = require('./routes/productRoute');
 app.use('/user', userRoutes)
-app.use('/category', categoryRoutes)
+app.use('/category', categoryRoutes);
+app.use('/product', productRoute)
 
 
 // Socket

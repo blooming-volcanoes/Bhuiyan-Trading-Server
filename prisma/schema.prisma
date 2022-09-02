@@ -34,13 +34,12 @@ model Product {
   shortDesc   String
   ProductDesc String
   FeatureImg  String?
-  ProductImgs Gallery[]
   categoryId  Category[]
 }
 
-model Gallery {
-  id         Int      @id @default(autoincrement())
-  imgLink    String
-  productImg Product? @relation(fields: [productId], references: [id])
-  productId  Int?
-}
+// model Gallery {
+//   id         Int      @id @default(autoincrement())
+//   imgLink    String
+//   productImg Product? @relation(fields: [productId], references: [id])
+//   productId  Int?
+// }
