@@ -16,3 +16,9 @@ model User {
   name     String?
   password String
 }
+
+model Category {
+  id              Int    @id @default(autoincrement())
+  categoryName    String @unique
+  subCategoryName String
+}
