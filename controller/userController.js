@@ -9,6 +9,7 @@ const { Prisma } = require('@prisma/client');
 
 
 
+/** Register User */
 exports.registerUser = catchAsyncError(async (req, res, next) => {
   const { name, pass, email } = req.body;
   // console.log(name, password, email);
@@ -47,6 +48,8 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
 
 })
 
+
+/** Login user */
 
 exports.loginUser = catchAsyncError(async (req, res, next) => {
   const { email, pass } = req.body;
