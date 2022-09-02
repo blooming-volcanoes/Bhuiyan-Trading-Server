@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt')
 const catchAsyncError = require('../middleware/catchAsyncError');
 const ErrorHandler = require('../lib/errorHandler');
 const { Prisma } = require('@prisma/client');
+const sendToken = require('../lib/jwt.js');
 
 
 
@@ -27,11 +28,7 @@ exports.registerUser = catchAsyncError(async (req, res, next) => {
       }
     })
 
-    res.status(200).json({
-      success: true,
-      user: user
-    })
-
+    sendToken(user, res, 200)
 
   } catch (err) {
     // console.log(err);
