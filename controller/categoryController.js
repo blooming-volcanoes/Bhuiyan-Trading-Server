@@ -41,3 +41,15 @@ exports.createCategory =  catchAsyncError(async (req, res, next) => {
     }
 
 })
+
+
+
+exports.getCategory =  catchAsyncError(async (req, res, next) => {
+
+   const category = await prisma.category.findMany();
+
+   return res.status(200).json({
+    success: true,
+    category
+});
+})
