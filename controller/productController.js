@@ -32,3 +32,22 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
     }
 })
 
+
+
+exports.getProduct =  catchAsyncError(async (req, res, next) => { 
+    const product = await prisma.product.findMany({});
+    console.log(product);
+
+    res.status(200).json({
+        success: true,
+        product
+    })
+})
+
+exports.getById =  catchAsyncError(async (req, res, next) => { 
+    const id = req.params.id;
+
+    // const product = 
+})
+
+
