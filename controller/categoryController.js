@@ -1,9 +1,9 @@
-const prisma = require('../prisma/prisma-client.js')
+
 const catchAsyncError = require('../middleware/catchAsyncError');
 
 const { Prisma } = require('@prisma/client');
 const ErrorHandler = require('../lib/errorHandler.js');
-
+const db = require('../db/connection')
 
 exports.createCategory =  catchAsyncError(async (req, res, next) => {
     console.log("oimaoo");
@@ -14,31 +14,15 @@ exports.createCategory =  catchAsyncError(async (req, res, next) => {
               return next(new ErrorHandler(message, 400))
     }
 
-    try{
-        let category = await prisma.category.create({
-            data:{
-                categoryName,
-                subCategoryName
-            }
-        })
+    let query = "insert into category(categoryName, subCategoryName) values (?,?)";
 
-        console.log(category,"o");
-
-      return res.status(200).json({
-            success: true,
-           msg: "Category is successfully added"
-        });
-
-    }catch(err){
-        if (err instanceof Prisma.PrismaClientKnownRequestError) {
-            if (err.code === 'P2002') {
-              const message = `Category name already Exist`;
-              return next(new ErrorHandler(message, 400))
-            }
-          }
-      
-          throw err;
-    }
+    db.query(query, [categoryName, subCategoryName], (err, result)=>{
+       if(!err && result.affectedRows >0){
+           return res.status(200).json({msg: "Category added"})
+       }else{
+           return res.status(500).json(err)
+       }
+    })
 
 })
 
@@ -46,10 +30,16 @@ exports.createCategory =  catchAsyncError(async (req, res, next) => {
 
 exports.getCategory =  catchAsyncError(async (req, res, next) => {
 
-   const category = await prisma.category.findMany();
+    let query = "select * from category order by categoryName";
 
-   return res.status(200).json({
-    success: true,
-    category
-});
+    db.query(query, (err, result)=>{
+        if(!err){
+            return res.status(200).json(result)
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+
+
+
 })
