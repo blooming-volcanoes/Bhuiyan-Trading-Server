@@ -14,7 +14,8 @@ create table category(
     id int NOT NULL AUTO_INCREMENT,
     categoryName varchar(255) NOT NULL,
     subCategoryName varchar(255) NOT NULL,
-    primary key(id)
+    primary key(id),
+    UNIQUE(categoryName)
 )
 
 
@@ -23,13 +24,11 @@ create table product(
     name varchar(255) NOT NULL,
     categoryId integer NOT NULL,
     description varchar(255),
-
-    price       varchar(255)
-    currency    varchar(255)
-    unit        varchar(255)
-    shortDesc   varchar(255)
-    ProductDesc varchar(255)
-    FeatureImg  varchar(255)?
-    status varchar(50),
+    price       varchar(191),
+    currency    varchar(191),
+    unit        varchar(191),
+    shortDesc   varchar(255),
+    roductDesc varchar(255),
+    featureImg  varchar(255),
     primary key(id)
 )
