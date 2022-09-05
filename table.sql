@@ -19,16 +19,15 @@ create table category(
 )
 
 
-create table product(
-    id int NOT NULL AUTO_INCREMENT,
-    name varchar(255) NOT NULL,
+create table products(
+     id int NOT NULL AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
     categoryId integer NOT NULL,
-    description varchar(255),
     price       varchar(191),
     currency    varchar(191),
     unit        varchar(191),
     shortDesc   varchar(255),
-    roductDesc varchar(255),
+    productDesc varchar(255),
     featureImg  varchar(255),
     primary key(id)
 )
