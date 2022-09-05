@@ -40,10 +40,43 @@ exports.getProduct =  catchAsyncError(async (req, res, next) => {
     })
 })
 
-exports.getById =  catchAsyncError(async (req, res, next) => { 
-    const id = req.params.id;
 
-    // const product = 
+
+
+
+exports.getByCategoryId =  catchAsyncError(async (req, res, next) => { 
+    const id = req.params.id
+    let query = "select id, title, price, shortDesc from products where categoryId=?";
+
+    db.query(query, [id], (err, result)=>{
+        if(!err){
+            return res.status(200).json(result);
+        }else{
+            return res.status(500).json(err);
+        }
+    })
 })
 
 
+
+
+exports.deleteProduct =  catchAsyncError(async (req, res, next) => { 
+    const id = req.params.id;
+
+    let query = "delete from products where id=?";
+
+    db.query(query, [id], (err, result)=>{
+
+        if(!err){
+            if(result.affectedRows === 0){
+                return res.status(404).json({msg: "Product id doesn't found"});
+            }
+
+            return res.status(200).json({msg:"your product has been successfully deleted"});
+        }else{
+            return res.status(500).json(err);
+        }
+    })
+
+
+})
