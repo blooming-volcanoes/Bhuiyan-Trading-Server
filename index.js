@@ -44,7 +44,6 @@ app.get('/', (req, res) => {
     res.send('hello');
 });
 
-console.log(prisma, "testing")
 
 
 app.use(errorMiddleware);

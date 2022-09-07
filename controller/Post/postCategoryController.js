@@ -1,4 +1,5 @@
-const db = require('../../db/connection')
+const db = require('../../db/connection');
+const catchAsyncError = require('../../middleware/catchAsyncError');
 
 
 
@@ -20,5 +21,22 @@ exports.createPostCategory =  catchAsyncError(async (req, res, next) => {
            return res.status(500).json(err)
        }
     })
+
+})
+
+
+exports.getPostCategory =  catchAsyncError(async (req, res, next) => {
+
+    let query = "select * from category order by categoryName";
+
+    db.query(query, (err, result)=>{
+        if(!err){
+            return res.status(200).json(result)
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+
+
 
 })
