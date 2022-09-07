@@ -20,10 +20,14 @@ app.use(express.urlencoded({ extended: true }));
 const userRoutes = require('./routes/userRoute');
 const categoryRoutes = require('./routes/categoryRoute');
 const productRoute = require('./routes/productRoute');
-const { prisma } = require('@prisma/client');
+const postCategoryRoute = require('./routes/postCategoryRoute')
+
+
 app.use('/user', userRoutes)
 app.use('/category', categoryRoutes);
-app.use('/product', productRoute)
+app.use('/product', productRoute);
+app.use('/post', postCategoryRoute);
+
 
 
 // Socket

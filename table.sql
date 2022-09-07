@@ -18,6 +18,15 @@ create table category(
     UNIQUE(categoryName)
 )
 
+--  Post category schema
+create table postCategory(
+    id int NOT NULL AUTO_INCREMENT,
+    categoryName varchar(255) NOT NULL,
+    subCategoryName varchar(255) NOT NULL,
+    primary key(id),
+    UNIQUE(categoryName)
+)
+
 
 create table products(
      id int NOT NULL AUTO_INCREMENT,
