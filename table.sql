@@ -40,3 +40,19 @@ create table products(
     featureImg  varchar(255),
     primary key(id)
 )
+
+
+create table posts(
+    id int not null AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
+    categoryId integer NOT NULL,
+    slug varchar(255),
+    postDesc mediumtext,
+    featureImg varchar(255),
+    imgCaption varchar(255),
+    focusKey varchar(255)
+    metaDesc varchar(255)
+    created_at timestamp default current_timestamp,
+    updated_at datetime default current_timestamp on update current_timestamp
+
+)
