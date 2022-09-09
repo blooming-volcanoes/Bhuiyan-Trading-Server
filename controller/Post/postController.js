@@ -23,3 +23,19 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
     })
   
  })
+
+
+
+ exports.getPost =  catchAsyncError(async (req, res, next) => { 
+    let query = "select p.title, p.postDesc, p.featureImg, p.imgCaption, p.focusKey, p.metaDesc, p.slug, pc.id as categoryId, pc.categoryName as categoryName from posts as p inner join postCategory as pc where p.categoryId = pc.id";
+
+    db.query(query, (err, result) => {
+        if (!err) {
+            return res.status(200).json(result)
+        } else {
+            return res.status(500).json(err);
+        }
+    })
+
+
+ })
