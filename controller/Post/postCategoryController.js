@@ -1,5 +1,7 @@
-const db = require('../../db/connection');
 const catchAsyncError = require('../../middleware/catchAsyncError');
+
+const sendToken = require('../../lib/jwt.js');
+const db = require('../../db/connection')
 
 
 

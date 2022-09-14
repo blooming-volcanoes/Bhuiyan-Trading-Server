@@ -17,11 +17,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // connect with MySql DB
-const userRoutes = require('./routes/userRoute');
-const categoryRoutes = require('./routes/categoryRoute');
-const productRoute = require('./routes/productRoute');
-const postCategoryRoute = require('./routes/postCategoryRoute');
-const postRoute = require('./routes/postRoute');
+const userRoutes = require('./routes/userRoutes/userRoute');
+const categoryRoutes = require('./routes/productRoutes/categoryRoute');
+const productRoute = require('./routes/productRoutes/productRoute');
+const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
+const postRoute = require('./routes/postRoutes/postRoute');
 
 
 app.use('/user', userRoutes)

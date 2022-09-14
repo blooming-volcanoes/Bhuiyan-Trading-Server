@@ -1,9 +1,7 @@
-const prisma = require('../prisma/prisma-client.js')
+const catchAsyncError = require('../../middleware/catchAsyncError');
 
-const catchAsyncError = require('../middleware/catchAsyncError');
-const ErrorHandler = require('../lib/errorHandler');
-const { Prisma } = require('@prisma/client');
-const db = require('../db/connection')
+const sendToken = require('../../lib/jwt.js');
+const db = require('../../db/connection')
 
 
 

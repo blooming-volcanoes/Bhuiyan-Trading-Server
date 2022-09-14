@@ -1,9 +1,7 @@
+const catchAsyncError = require('../../middleware/catchAsyncError');
 
-const catchAsyncError = require('../middleware/catchAsyncError');
-
-const { Prisma } = require('@prisma/client');
-const ErrorHandler = require('../lib/errorHandler.js');
-const db = require('../db/connection')
+const sendToken = require('../../lib/jwt.js');
+const db = require('../../db/connection')
 
 exports.createCategory =  catchAsyncError(async (req, res, next) => {
     console.log("oimaoo");

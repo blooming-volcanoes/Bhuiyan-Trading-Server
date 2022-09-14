@@ -1,13 +1,11 @@
 
 
 
-const prisma = require('../prisma/prisma-client.js')
 const bcrypt = require('bcrypt')
-const catchAsyncError = require('../middleware/catchAsyncError');
-const ErrorHandler = require('../lib/errorHandler');
-const { Prisma } = require('@prisma/client');
-const sendToken = require('../lib/jwt.js');
-const db = require('../db/connection')
+const catchAsyncError = require('../../middleware/catchAsyncError');
+
+const sendToken = require('../../lib/jwt.js');
+const db = require('../../db/connection')
 
 
 /** Register User */
