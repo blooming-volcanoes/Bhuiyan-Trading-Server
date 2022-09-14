@@ -1,13 +1,13 @@
 require('dotenv').config();
-const mysql = require('mysql');
+const mysql = require('mysql2');
 
 console.log(process.env.DB_USER);
 let connection = mysql.createPool({
-    port:3306,
-    host:"localhost",
+    port:7257,
+    host:"containers-us-west-43.railway.app",
     user: "root",
-    password: "password",
-    database: "buiyandb"
+    password: "LVmd44OGibG6oYoGr6Ad",
+    database: "railway"
 })
 
 

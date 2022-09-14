@@ -15,7 +15,7 @@ exports.registerUser =  (req, res, next) => {
   
   let {name, password, email,contactNumber} = req.body;
 
-  console.log("oso",name, password, email,contactNumber);
+  // console.log("oso",name, password, email,contactNumber);
  let query = "select email from user where email=?";
 
  try{
@@ -26,11 +26,14 @@ exports.registerUser =  (req, res, next) => {
           if(result.length >0){
               return res.status(400).json({msg:"Email already exist"})
           }else{
-              query = "insert into User(name,email,contactNumber, password,status,role) values (?,?,?,?,'active','user')";
+              query = "insert into user(name,email,contactNumber, password,status,role) values (?,?,?,?,'active','user')";
 
               db.query(query, [ name,email,contactNumber, password], (err, result)=>{
                   if(!err){
-                    sendToken(result[0],res, 200)
+                    console.log(result,"oo",err);
+                    query = "select * from user"
+                    // let res = db.query
+                    // sendToken(result[0],res, 200)
                   }else{
                       return res.status(500).json(err)
                   }
@@ -57,7 +60,7 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
   
  
   db.query(query,[email], (err, result)=>{
-        console.log(err, result);
+        console.log(err, result[0].password);
         // let compare = 
           if(!err){
               if(result.length <=0 ){
@@ -68,7 +71,7 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
               }else if(password === result[0].password){
                 sendToken(result[0],res, 200)
               }else{
-                  return res.status(500).json({msg: "smeting went wrong"})
+                  return res.status(500).json({msg: "something went wrong"})
               }
           }else{
               res.status(500).json({msg: err})

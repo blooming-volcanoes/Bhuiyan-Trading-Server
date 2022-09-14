@@ -36,6 +36,8 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
             return res.status(500).json(err);
         }
     })
-
-
  })
+
+
+
+ 
