@@ -1,4 +1,4 @@
-const { createPost, getPost } = require('../controller/Post/postController');
+const { createPost, getPost } = require('../../controller/Post/postController');
 
 
 

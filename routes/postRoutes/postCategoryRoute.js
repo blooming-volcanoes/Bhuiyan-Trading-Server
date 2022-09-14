@@ -1,4 +1,4 @@
-const { createPostCategory, getPostCategory } = require("../controller/Post/postCategoryController");
+const { createPostCategory, getPostCategory } = require("../../controller/Post/postCategoryController");
 
 const router = require("express").Router();
 
