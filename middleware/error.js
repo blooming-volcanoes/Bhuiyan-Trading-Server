@@ -3,6 +3,7 @@
  */
 
 const { Prisma } = require("@prisma/client");
+const ErrorHandler = require("../lib/errorHandler");
 
 
 module.exports = (error, req, res, next)=>{

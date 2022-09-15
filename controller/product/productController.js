@@ -27,7 +27,7 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
 
 exports.getProduct =  catchAsyncError(async (req, res, next) => { 
-    let query = "select p.id, p.title, p.shortDesc,p.productDesc, p.featureImg,p.unit, p.currency, p.price, pc.id as categoryId, pc.categoryName as categoryName from products as p INNER JOIN category as c where p.categoryId = c.id";
+    let query = "select p.id, p.title, p.shortDesc,p.productDesc, p.featureImg,p.unit, p.currency, p.price, pc.id as categoryId, pc.categoryName as categoryName from products as p INNER JOIN category as pc where p.categoryId = pc.id";
 
     db.query(query, (err, result) => {
         if (!err) {

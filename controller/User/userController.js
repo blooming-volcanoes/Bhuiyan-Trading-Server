@@ -54,9 +54,9 @@ exports.registerUser =  (req, res, next) => {
 
 exports.loginUser = catchAsyncError(async (req, res, next) => {
   let {email, password} = req.body
-  let query = "select email, password, role, status,name from user where email=?";
+  let query = "select email, password, role, status,name, id from user where email=?";
   
- 
+ console.log("olo");
   db.query(query,[email], (err, result)=>{
         console.log(err, result[0].password);
         // let compare = 
@@ -75,5 +75,21 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
               res.status(500).json({msg: err})
           }
       })
-
 })
+
+
+
+// exports.loginUser = catchAsyncError(async (req, res, next) => { 
+
+// })
+
+
+exports.findById=async(email)=>{
+  const query = "select id, email from user where email=?"
+
+  db.query(query,[email], (err, result)=>{
+    if(!err){
+      return result[0];
+    }
+  })
+}

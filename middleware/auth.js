@@ -1,20 +1,22 @@
 /* eslint-disable consistent-return */
 const jwt = require('jsonwebtoken');
-const ErrorHandler = require('../lib/errorHandler');
+const { findById } = require('../controller/User/userController');
+const errorHandler = require('../lib/errorHandler');
+const catchAsyncError = require('./catchAsyncError');
 require('dotenv').config();
 
-const catchAsyncErrors = require('./catchAsyncErrors');
 
 
-exports.isAuthenticated = catchAsyncErrors(async (req, res, next) => {
+exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
     console.log(req.headers.authorization, 'auth');
     const authorization = req.headers.authorization.split(' ')[1];
     if (!authorization) {
-        return next(new ErrorHandler('Please Login to access this resource', 401));
+        return next(new errorHandler('Please Login to access this resource', 401));
     }
 
     const decodeData = jwt.verify(authorization, process.env.JWT_SECRET);
-    req.user = await Users.findById(decodeData.id);
+    console.log(decodeData,"Ol");
+    req.user = await findById(decodeData.id);
     next();
 });
 
@@ -23,7 +25,7 @@ exports.authorizeRoles = (...roles) => {
     (req, res, next) => {
         if (!roles.includes(req.user.role)) {
             return next(
-                new ErrorHandler(`Role: ${req.user.role} is not allowed to access this resource`),
+                new errorHandler(`Role: ${req.user.role} is not allowed to access this resource`),
             );
         }
         next();

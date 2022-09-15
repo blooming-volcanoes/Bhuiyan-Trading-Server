@@ -1,11 +1,11 @@
-const catchAsyncError = require('../../middleware/catchAsyncError');
+
 
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 
 
-exports.createPostCategory =  catchAsyncError(async (req, res, next) => {
+exports.createPostCategory =  (async (req, res, next) => {
     console.log("oimaoo");
     let {categoryName, subCategoryName} = req.body;
 
@@ -27,7 +27,7 @@ exports.createPostCategory =  catchAsyncError(async (req, res, next) => {
 })
 
 
-exports.getPostCategory =  catchAsyncError(async (req, res, next) => {
+exports.getPostCategory =  (async (req, res, next) => {
 
     let query = "select * from category order by categoryName";
 
