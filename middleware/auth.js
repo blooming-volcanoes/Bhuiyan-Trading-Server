@@ -16,18 +16,18 @@ exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
 
     const decodeData = jwt.verify(authorization, process.env.JWT_SECRET);
     console.log(decodeData,"Ol");
-    req.user = await findById(decodeData.id);
+    req.user = findById(decodeData.id);
+    console.log(req.user,"odlo");
     next();
 });
 
 // Checking wether that person is an admin or not
-exports.authorizeRoles = (...roles) => {
-    (req, res, next) => {
-        if (!roles.includes(req.user.role)) {
+exports.authorizeRoles = (req, res, next) => {
+    console.log(req.user,"reqes");
+        if ((req.user.role) == 'admin') {
             return next(
                 new errorHandler(`Role: ${req.user.role} is not allowed to access this resource`),
             );
         }
         next();
     };
-};

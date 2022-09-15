@@ -84,11 +84,12 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
 // })
 
 
-exports.findById=async(email)=>{
-  const query = "select id, email from user where email=?"
-
-  db.query(query,[email], (err, result)=>{
+exports.findById=async(id)=>{
+  const query = "select id, email, role from user where id=?"
+  console.log(id,"formo re");
+  db.query(query,[id], (err, result)=>{
     if(!err){
+      console.log(result[0]);
       return result[0];
     }
   })
