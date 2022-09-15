@@ -8,17 +8,18 @@ require('dotenv').config();
 
 
 exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
-    console.log(req.headers.authorization, 'auth');
     const authorization = req.headers.authorization.split(' ')[1];
     if (!authorization) {
         return next(new errorHandler('Please Login to access this resource', 401));
     }
 
-    const decodeData = jwt.verify(authorization, process.env.JWT_SECRET);
-    console.log(decodeData,"Ol");
-    req.user = findById(decodeData.id);
-    console.log(req.user,"odlo");
-    next();
+    const decodeData = await jwt.verify(authorization, process.env.JWT_SECRET);
+    req.user = (decodeData);
+    console.log(req.user);
+    if(req.user){
+        console.log(req.user,"odlo");
+        next();
+    }
 });
 
 // Checking wether that person is an admin or not
