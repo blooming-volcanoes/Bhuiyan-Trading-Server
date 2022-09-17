@@ -1,5 +1,8 @@
 const catchAsyncError = require('../../middleware/catchAsyncError');
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
@@ -16,7 +19,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
     db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, slug], (err, result) => {
         if (!err) {
-            console.log(result);
+            logger.debug(result,"from create post");
             return res.status(200).json({ msg: "Product Added successfully" })
         } else {
             return res.status(500).json(err)

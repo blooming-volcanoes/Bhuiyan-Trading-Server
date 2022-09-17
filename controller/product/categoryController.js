@@ -1,10 +1,12 @@
 const catchAsyncError = require('../../middleware/catchAsyncError');
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 exports.createCategory =  catchAsyncError(async (req, res, next) => {
-    console.log("oimaoo");
     let {categoryName, subCategoryName} = req.body;
 
     if(!categoryName || !subCategoryName){

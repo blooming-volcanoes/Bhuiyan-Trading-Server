@@ -3,6 +3,8 @@ const catchAsyncError = require('../../middleware/catchAsyncError');
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
 
 
 
@@ -14,7 +16,7 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
     db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg,categoryId], (err, result) => {
         if (!err) {
-            console.log(result);
+            logger.debug(result,"from create product");
             return res.status(200).json({ msg: "Product Added successfully" })
         } else {
             return res.status(500).json(err)

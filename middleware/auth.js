@@ -5,6 +5,9 @@ const errorHandler = require('../lib/errorHandler');
 const catchAsyncError = require('./catchAsyncError');
 require('dotenv').config();
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
 
 
 exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
@@ -15,16 +18,16 @@ exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
 
     const decodeData = await jwt.verify(authorization, process.env.JWT_SECRET);
     req.user = (decodeData);
-    console.log(req.user);
+    logger.debug(req.user, "is authenticated file");
     if(req.user){
-        console.log(req.user,"odlo");
+        logger.debug(req.user,"req user");
         next();
     }
 });
 
 // Checking wether that person is an admin or not
 exports.authorizeRoles = (req, res, next) => {
-    console.log(req.user,"reqes");
+    logger.debug(req.user,"authorize roles");
         if ((req.user.role) == 'admin') {
             return next(
                 new errorHandler(`Role: ${req.user.role} is not allowed to access this resource`),

@@ -4,6 +4,9 @@ const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 const catchAsyncError = require('../../middleware/catchAsyncError');
 
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection');
 const ErrorHandler = require('../../lib/errorHandler');
@@ -14,14 +17,13 @@ exports.registerUser =  (req, res, next) => {
   
   let {name, password, email,contactNumber} = req.body;
 
-  // console.log("oso",name, password, email,contactNumber);
+ 
  let query = "select email from user where email=?";
 
  try{
    db.query(query,[email], (err, result)=>{
-        console.log(err,"oel",result);
+    logger.debug(err,"oel",result, "from register user");
         if(!err){
-          console.log(result.length);
           if(result.length >0){
               return res.status(400).json({msg:"Email already exist"})
           }else{
@@ -29,7 +31,7 @@ exports.registerUser =  (req, res, next) => {
 
               db.query(query, [ name,email,contactNumber, password], (err, result)=>{
                   if(!err){
-                    console.log(result,"oo",err);
+                    logger.debug(result,"oo",err, "second register user");
                     query = "select * from user"
                     // let res = db.query
                     // sendToken(result[0],res, 200)
@@ -58,13 +60,12 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
   let query = "select email, password, role, status,name, id from user where email=?";
   
   db.query(query,[email], (err, result)=>{
-        console.log(err, result[0].password);
+    logger.debug(err, result[0].password, "from login user");
         // let compare = 
           if(!err){
               if(result.length <=0 ){
                   return res.status(401).json({msg: "Incorrect username or password"})
               }else if(result[0].status == "false"){
-                  console.log("Odoo");
                   return res.status(401).json({msg: "Wait for the admin approval"})
               }else if(password === result[0].password){
                 sendToken(result[0],res, 200)
@@ -90,7 +91,7 @@ exports.forgetPassword = catchAsyncError(async (req, res, next) => {
   let user = req.body;
   let query = "select email, password from user where email=?"
 
-  console.log(process.env.EMAIL, process.env.PASS);
+  logger.debug(process.env.EMAIL, process.env.PASS);
   db.query(query,[user.email], (err, result)=>{
       if(!err){
           if(result.length <=0 ){
@@ -129,7 +130,7 @@ exports.forgetPassword = catchAsyncError(async (req, res, next) => {
 /** Change Password */
 
 exports.changePassword = catchAsyncError(async (req, res, next) => { 
-  console.log(req.user,"ofaload");
+    logger.debug(req.user,"ofaload", "change password");
   const email = req.user.email;
     const {oldPass, newPass, confirmPass} = req.body;
     let query = "select * from user where email=?";
@@ -137,7 +138,7 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
     db.query(query, [email], (err, result)=>{
         if(!err){
             const passCompare = oldPass === result[0].password
-            console.log(result, passCompare);
+            logger.debug(result, passCompare, "change pass");
             if( !passCompare){
                 return res.status(400).json({msg: "Your old Password is incorrect"})
             } else if(passCompare){
@@ -167,15 +168,3 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
 
 
 
-
-
-exports.findById=(id)=>{
-  const query = "select id, email, role from user where id=?"
-  console.log(id,"formo re");
-  db.query(query,[id], (err, result)=>{
-    if(!err){
-      console.log(result[0],"don't know");
-      return result[0];
-    }
-  })
-}

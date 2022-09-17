@@ -23,6 +23,15 @@ const productRoute = require('./routes/productRoutes/productRoute');
 const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
 const postRoute = require('./routes/postRoutes/postRoute');
 
+const log4js = require('log4js');
+const path = require('path');
+const logger = log4js.getLogger();
+
+log4js.configure({
+  appenders: { everything: { type: 'file', filename: 'logs.log' } },
+  categories: { default: { appenders: ['everything'], level: 'ALL' } }
+});
+
 
 app.use('/user', userRoutes)
 app.use('/category', categoryRoutes);
@@ -37,19 +46,28 @@ const http = require('http').createServer(app);
 
 
 
-app.get('/hi', (req, res) => {
-    res.send('hi');
-    console.log('Hi');
-});
-
 app.get('/', (req, res) => {
-    res.send('hello');
+    res.send('hi');
+    logger.debug("odo");
+});
+
+app.get('/log', (req, res) => {
+  console.log(__dirname+"/logs.log");
+  res.sendFile(path.join(__dirname + '/logs.log'));
 });
 
 
+// app.get('/', (req, res) => {
+//     res.send('hello');
+// });
 
-// app.use(errorMiddleware);
+
+
+app.use(errorMiddleware);
 
 http.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    logger.debug(`Example app listening at http://localhost:${port}`);
 });
+
+
+module.exports = logger
