@@ -12,14 +12,22 @@ const db = require('../../db/connection');
 const ErrorHandler = require('../../lib/errorHandler');
 
 
+
+
+
+function findByEmail(email){
+    let query = "select email from user where email=?";
+   
+
+}
+
+
 /** Register User */
 exports.registerUser =  (req, res, next) => {
   
   let {name, password, email,contactNumber} = req.body;
 
- 
- let query = "select email from user where email=?";
-
+  let query = "select email from user where email=?";
  try{
    db.query(query,[email], (err, result)=>{
     logger.debug(err,"oel",result, "from register user");
@@ -31,10 +39,14 @@ exports.registerUser =  (req, res, next) => {
 
               db.query(query, [ name,email,contactNumber, password], (err, result)=>{
                   if(!err){
-                    logger.debug(result,"oo",err, "second register user");
-                    query = "select * from user"
-                    // let res = db.query
-                    // sendToken(result[0],res, 200)
+                    query = "select email, id, role from user where email=?";
+                    db.query(query,[email], (err, result)=>{
+                        if(!err){
+                            sendToken(result[0],res, 200)
+                        }else{
+                            
+                        }
+                    })
                   }else{
                       return res.status(500).json(err)
                   }

@@ -15,7 +15,7 @@ const logger = log4js.getLogger();
 let connection = mysql.createPool({
     port:3306,
     host:"localhost",
-    user: "user",
+    user: "root",
     password: "password",
     database: "buiyandb"
 })

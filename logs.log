@@ -79,3 +79,171 @@
 [2022-09-15T20:43:22.825] [DEBUG] default - Db connection successful
 [2022-09-15T20:55:23.632] [DEBUG] default - Example app listening at http://localhost:3000
 [2022-09-15T20:55:58.042] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:27:16.617] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:28:06.356] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:28:31.093] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:28:37.793] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:31:15.552] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:31:27.176] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:32:13.579] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:32:50.155] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:32:50.218] [DEBUG] default - null err
+[2022-09-17T09:32:50.218] [DEBUG] default - Db connection successful
+[2022-09-17T09:33:33.864] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:36:09.807] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:36:09.887] [DEBUG] default - null err
+[2022-09-17T09:36:09.887] [DEBUG] default - Db connection successful
+[2022-09-17T09:37:29.052] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:37:29.134] [DEBUG] default - null err
+[2022-09-17T09:37:29.135] [DEBUG] default - Db connection successful
+[2022-09-17T09:37:41.934] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:37:41.964] [DEBUG] default - null err
+[2022-09-17T09:37:41.964] [DEBUG] default - Db connection successful
+[2022-09-17T09:38:01.348] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:38:01.380] [DEBUG] default - null err
+[2022-09-17T09:38:01.380] [DEBUG] default - Db connection successful
+[2022-09-17T09:38:05.425] [DEBUG] default - null oel [ { email: 'visedog935@nicoimg.com' } ] from register user
+[2022-09-17T09:38:12.787] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:40:11.726] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:40:11.843] [DEBUG] default - null err
+[2022-09-17T09:40:11.843] [DEBUG] default - Db connection successful
+[2022-09-17T09:40:17.515] [DEBUG] default - null oel [ { email: 'dg935@nicoimg.com' } ] from register user
+[2022-09-17T09:40:21.531] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:40:48.575] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:40:48.649] [DEBUG] default - null err
+[2022-09-17T09:40:48.649] [DEBUG] default - Db connection successful
+[2022-09-17T09:40:52.941] [DEBUG] default - null oel [ { email: 'ds5@nicoimg.com' } ] from register user
+[2022-09-17T09:40:56.713] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:41:22.994] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:41:23.027] [DEBUG] default - null err
+[2022-09-17T09:41:23.027] [DEBUG] default - Db connection successful
+[2022-09-17T09:41:36.359] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:42:24.927] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:42:24.966] [DEBUG] default - null err
+[2022-09-17T09:42:24.966] [DEBUG] default - Db connection successful
+[2022-09-17T09:42:31.341] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:42:57.915] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:42:57.994] [DEBUG] default - null err
+[2022-09-17T09:42:57.994] [DEBUG] default - Db connection successful
+[2022-09-17T09:43:06.363] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:43:37.775] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:43:37.841] [DEBUG] default - null err
+[2022-09-17T09:43:37.841] [DEBUG] default - Db connection successful
+[2022-09-17T09:43:43.768] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:44:17.055] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:44:17.169] [DEBUG] default - null err
+[2022-09-17T09:44:17.169] [DEBUG] default - Db connection successful
+[2022-09-17T09:44:26.730] [DEBUG] default - null oel [] from register user
+[2022-09-17T09:44:26.742] [DEBUG] default - { email: 'sd@eicoimg.com', id: 11, role: 'user' } jwt token
+[2022-09-17T09:47:06.840] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T09:47:06.896] [DEBUG] default - null err
+[2022-09-17T09:47:06.896] [DEBUG] default - Db connection successful
+[2022-09-17T11:54:27.798] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T11:54:27.899] [DEBUG] default - null err
+[2022-09-17T11:54:27.899] [DEBUG] default - Db connection successful
+[2022-09-17T11:55:17.359] [DEBUG] default - null oel [ { email: 'sd@eicoimg.com' } ] from register user
+[2022-09-17T11:55:21.459] [DEBUG] default - null oel [] from register user
+[2022-09-17T11:55:33.983] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} is authenticated file
+[2022-09-17T11:55:33.985] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} req user
+[2022-09-17T11:55:33.987] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} authorize roles
+[2022-09-17T11:56:10.870] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} is authenticated file
+[2022-09-17T11:56:10.871] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} req user
+[2022-09-17T11:56:10.872] [DEBUG] default - {
+  id: 12,
+  email: 'sd@edicoimg.com',
+  role: 'user',
+  iat: 1663394121,
+  exp: 1663480521
+} authorize roles
+[2022-09-17T11:56:10.883] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-17T12:17:29.319] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T12:17:29.463] [DEBUG] default - null err
+[2022-09-17T12:17:29.463] [DEBUG] default - Db connection successful
+[2022-09-17T12:18:50.245] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T12:18:50.352] [DEBUG] default - null err
+[2022-09-17T12:18:50.353] [DEBUG] default - Db connection successful
+[2022-09-17T12:25:19.005] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663394682,
+  exp: 1663481082
+} is authenticated file
+[2022-09-17T12:25:19.012] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663394682,
+  exp: 1663481082
+} req user
+[2022-09-17T12:25:19.014] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663394682,
+  exp: 1663481082
+} authorize roles
+[2022-09-17T12:26:53.503] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T12:26:53.664] [DEBUG] default - null err
+[2022-09-17T12:26:53.665] [DEBUG] default - Db connection successful
+[2022-09-17T12:27:01.845] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663396000,
+  exp: 1663482400
+} is authenticated file
+[2022-09-17T12:27:01.847] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663396000,
+  exp: 1663482400
+} req user
+[2022-09-17T12:27:01.848] [DEBUG] default - {
+  id: 1,
+  email: 'foortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663396000,
+  exp: 1663482400
+} authorize roles
+[2022-09-17T12:33:57.754] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-17T12:33:57.963] [DEBUG] default - null err
+[2022-09-17T12:33:57.964] [DEBUG] default - Db connection successful

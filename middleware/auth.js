@@ -28,7 +28,7 @@ exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
 // Checking wether that person is an admin or not
 exports.authorizeRoles = (req, res, next) => {
     logger.debug(req.user,"authorize roles");
-        if ((req.user.role) == 'admin') {
+        if ((req.user.role) !== 'admin') {
             return next(
                 new errorHandler(`Role: ${req.user.role} is not allowed to access this resource`),
             );
