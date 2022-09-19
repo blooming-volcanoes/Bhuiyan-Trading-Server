@@ -25,6 +25,7 @@ const postRoute = require('./routes/postRoutes/postRoute');
 
 const log4js = require('log4js');
 const path = require('path');
+const upload = require('./lib/multer');
 const logger = log4js.getLogger();
 
 log4js.configure({
@@ -57,13 +58,17 @@ app.get('/log', (req, res) => {
 });
 
 
-// app.get('/', (req, res) => {
-//     res.send('hello');
-// });
 
 
 
-app.use(errorMiddleware);
+app.post('/postImg',upload.single("uploadFile"), (req, res, next)=>{
+
+  res.send("suucess");
+});
+
+
+
+// app.use(errorMiddleware);
 
 http.listen(port, () => {
     logger.debug(`Example app listening at http://localhost:${port}`);
