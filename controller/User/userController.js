@@ -35,7 +35,7 @@ exports.registerUser =  (req, res, next) => {
           if(result.length >0){
               return res.status(400).json({msg:"Email already exist"})
           }else{
-              query = "insert into user(name,email,contactNumber, password,status,role) values (?,?,?,?,'active','user')";
+              query = "insert into user (name,email,contactNumber, password,status,role) values (?,?,?,?,'active','admin')";
 
               db.query(query, [ name,email,contactNumber, password], (err, result)=>{
                   if(!err){
@@ -72,7 +72,7 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
   let query = "select email, password, role, status,name, id from user where email=?";
   
   db.query(query,[email], (err, result)=>{
-    logger.debug(err, result[0].password, "from login user");
+    logger.debug(err, result, "from login user");
         // let compare = 
           if(!err){
               if(result.length <=0 ){

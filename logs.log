@@ -295,3 +295,141 @@
 [2022-09-19T12:24:59.520] [DEBUG] default - Example app listening at http://localhost:3000
 [2022-09-19T12:24:59.572] [DEBUG] default - null err
 [2022-09-19T12:24:59.572] [DEBUG] default - Db connection successful
+[2022-09-19T13:53:01.884] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-19T13:53:02.038] [DEBUG] default - null err
+[2022-09-19T13:53:02.038] [DEBUG] default - Db connection successful
+[2022-09-19T13:53:52.124] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-19T13:53:52.202] [DEBUG] default - null err
+[2022-09-19T13:53:52.202] [DEBUG] default - Db connection successful
+[2022-09-19T13:56:43.116] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-19T13:56:43.188] [DEBUG] default - null err
+[2022-09-19T13:56:43.188] [DEBUG] default - Db connection successful
+[2022-09-20T13:23:26.376] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T13:23:27.019] [DEBUG] default - null err
+[2022-09-20T13:23:27.019] [DEBUG] default - Db connection successful
+[2022-09-20T13:33:54.837] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T13:33:54.918] [DEBUG] default - null err
+[2022-09-20T13:33:54.919] [DEBUG] default - Db connection successful
+[2022-09-20T14:02:29.297] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:02:29.717] [DEBUG] default - null err
+[2022-09-20T14:02:29.718] [DEBUG] default - Db connection successful
+[2022-09-20T14:02:30.303] [DEBUG] default - null [] from login user
+[2022-09-20T14:03:57.019] [DEBUG] default - null oel [] from register user
+[2022-09-20T14:03:57.089] [DEBUG] default - { email: 'foortiawal@gmail.com', id: 13, role: 'user' } from token
+[2022-09-20T14:03:57.115] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZm9vcnRpYXdhbEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MzY2MTAzNywiZXhwIjoxNjYzNzQ3NDM3fQ.5JjPWdrTsQ12Nu-GIYsvTnW6SG6zBwnYnKafXV9D0cc identify jwt token
+[2022-09-20T14:05:53.770] [DEBUG] default - null oel [ { email: 'foortiawal@gmail.com' } ] from register user
+[2022-09-20T14:05:59.371] [DEBUG] default - null oel [] from register user
+[2022-09-20T14:05:59.392] [DEBUG] default - { email: 'foiortiawal@gmail.com', id: 14, role: 'user' } from token
+[2022-09-20T14:05:59.411] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoiZm9pb3J0aWF3YWxAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2NjM2NjExNTksImV4cCI6MTY2Mzc0NzU1OX0.N78vueIZhq4dkpz5Z4Nx0xd8gRCawlI1IB4aC49c1MM identify jwt token
+[2022-09-20T14:07:03.930] [DEBUG] default - null [
+  {
+    email: 'foortiawal@gmail.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'awal',
+    id: 13
+  }
+] from login user
+[2022-09-20T14:07:03.940] [DEBUG] default - {
+  email: 'foortiawal@gmail.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'awal',
+  id: 13
+} from token
+[2022-09-20T14:07:03.942] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZm9vcnRpYXdhbEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MzY2MTIyMywiZXhwIjoxNjYzNzQ3NjIzfQ.ZyGLER9ZLW-nHGAG4c-gp9b8sksYf4r14UVj53lllZc identify jwt token
+[2022-09-20T14:07:36.811] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663661223,
+  exp: 1663747623
+} is authenticated file
+[2022-09-20T14:07:36.814] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663661223,
+  exp: 1663747623
+} req user
+[2022-09-20T14:07:36.815] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663661223,
+  exp: 1663747623
+} authorize roles
+[2022-09-20T14:13:24.972] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:13:25.105] [DEBUG] default - null err
+[2022-09-20T14:13:25.105] [DEBUG] default - Db connection successful
+[2022-09-20T14:13:36.301] [DEBUG] default - null oel [] from register user
+[2022-09-20T14:13:36.337] [DEBUG] default - { email: 'fortiawal@gmail.com', id: 15, role: 'admin' } from token
+[2022-09-20T14:13:36.341] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiZm9ydGlhd2FsQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzY2MTYxNiwiZXhwIjoxNjYzNzQ4MDE2fQ.heemYYZy8YWvcLAJZIFoivRbga5iy5iBsFu4pFM51yc identify jwt token
+[2022-09-20T14:13:51.122] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} is authenticated file
+[2022-09-20T14:13:51.123] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} req user
+[2022-09-20T14:13:51.123] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} authorize roles
+[2022-09-20T14:15:05.618] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} is authenticated file
+[2022-09-20T14:15:05.619] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} req user
+[2022-09-20T14:15:05.619] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} authorize roles
+[2022-09-20T14:17:18.522] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:17:18.647] [DEBUG] default - null err
+[2022-09-20T14:17:18.647] [DEBUG] default - Db connection successful
+[2022-09-20T14:17:20.216] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} is authenticated file
+[2022-09-20T14:17:20.217] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} req user
+[2022-09-20T14:17:20.218] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} authorize roles

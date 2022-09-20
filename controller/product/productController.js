@@ -10,11 +10,11 @@ const logger = log4js.getLogger();
 
 exports.createProduct = catchAsyncError(async (req, res, next) => {
 
-    const {title, price, currency, unit, shortDesc, productDesc, featureImg,categoryId } = req.body;
+    const {title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId } = req.body;
 
-    let query = "insert into products (title, price, currency, unit, shortDesc, productDesc, featureImg,categoryId) values (?,?,?,?,?,?,?,?)";
+    let query = "insert into products (title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId) values (?,?,?,?,?,?,?,?,?)";
 
-    db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg,categoryId], (err, result) => {
+    db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId], (err, result) => {
         if (!err) {
             logger.debug(result,"from create product");
             return res.status(200).json({ msg: "Product Added successfully" })

@@ -38,6 +38,7 @@ create table products(
     shortDesc   varchar(255),
     productDesc varchar(255),
     featureImg  varchar(255),
+    gallaryImg  LONGTEXT,
     primary key(id)
 )
 
@@ -55,4 +56,10 @@ create table posts(
     created_at timestamp default current_timestamp,
     updated_at datetime default current_timestamp on update current_timestamp
 
+)
+
+
+create table gallary (
+     id int not null AUTO_INCREMENT,
+     url text
 )
