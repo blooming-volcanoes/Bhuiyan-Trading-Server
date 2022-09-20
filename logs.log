@@ -433,3 +433,59 @@
   iat: 1663661616,
   exp: 1663748016
 } authorize roles
+[2022-09-20T14:19:41.941] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} is authenticated file
+[2022-09-20T14:19:41.951] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} req user
+[2022-09-20T14:19:41.951] [DEBUG] default - {
+  id: 15,
+  email: 'fortiawal@gmail.com',
+  role: 'admin',
+  iat: 1663661616,
+  exp: 1663748016
+} authorize roles
+[2022-09-20T14:19:42.001] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-20T14:23:03.749] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:23:03.928] [DEBUG] default - null err
+[2022-09-20T14:23:03.929] [DEBUG] default - Db connection successful
+[2022-09-20T14:24:12.473] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:24:12.533] [DEBUG] default - null err
+[2022-09-20T14:24:12.533] [DEBUG] default - Db connection successful
+[2022-09-20T14:25:31.222] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:25:31.352] [DEBUG] default - null err
+[2022-09-20T14:25:31.353] [DEBUG] default - Db connection successful
+[2022-09-20T14:25:46.013] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:25:46.107] [DEBUG] default - null err
+[2022-09-20T14:25:46.107] [DEBUG] default - Db connection successful
+[2022-09-20T14:28:47.963] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:28:48.119] [DEBUG] default - null err
+[2022-09-20T14:28:48.120] [DEBUG] default - Db connection successful
+[2022-09-20T14:29:34.833] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:29:34.899] [DEBUG] default - null err
+[2022-09-20T14:29:34.899] [DEBUG] default - Db connection successful
+[2022-09-20T14:30:41.643] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:30:41.719] [DEBUG] default - null err
+[2022-09-20T14:30:41.720] [DEBUG] default - Db connection successful
+[2022-09-20T14:30:46.826] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:30:46.913] [DEBUG] default - null err
+[2022-09-20T14:30:46.913] [DEBUG] default - Db connection successful
+[2022-09-20T14:31:38.096] [DEBUG] default - Example app listening at http://localhost:3000
+[2022-09-20T14:31:38.144] [DEBUG] default - null err
+[2022-09-20T14:31:38.145] [DEBUG] default - Db connection successful
