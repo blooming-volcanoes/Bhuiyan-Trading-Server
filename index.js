@@ -2,12 +2,11 @@
 const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
-const connection = require('./db/connection')
-
+const connection = require('./db/connection');
 
 const app = require('express')();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 // middleware
 const errorMiddleware = require('./middleware/error');
@@ -26,47 +25,43 @@ const postRoute = require('./routes/postRoutes/postRoute');
 const log4js = require('log4js');
 const path = require('path');
 const upload = require('./lib/multer');
+const galleryRouter = require('./routes/galleryRoutes/galleryRoutes');
 const logger = log4js.getLogger();
 
 log4js.configure({
-  appenders: { everything: { type: 'file', filename: 'logs.log' } },
-  categories: { default: { appenders: ['everything'], level: 'ALL' } }
+    appenders: { everything: { type: 'file', filename: 'logs.log' } },
+    categories: { default: { appenders: ['everything'], level: 'ALL' } },
 });
 
+app.use(express.static(path.join(__dirname, 'storage')));
 
-app.use('/user', userRoutes)
+app.use('/user', userRoutes);
 app.use('/category', categoryRoutes);
 app.use('/product', productRoute);
 app.use('/post', postCategoryRoute);
-app.use('/blog', postRoute)
-
-
+app.use('/blog', postRoute);
+app.use('/gallery', galleryRouter);
 
 // Socket
 const http = require('http').createServer(app);
 
-
-
 app.get('/', (req, res) => {
     res.send('hi');
-    logger.debug("odo");
+    logger.debug('odo');
 });
 
 app.get('/log', (req, res) => {
-  console.log(__dirname+"/logs.log");
-  res.sendFile(path.join(__dirname + '/logs.log'));
+    console.log(__dirname + '/logs.log');
+    res.sendFile(path.join(__dirname + '/logs.log'));
 });
 
-
-
-
-
-app.post('/postImg',upload.single("uploadFile"), (req, res, next)=>{
-
-  res.send("suucess");
+app.post('/postImg', upload.single('uploadFile'), (req, res, next) => {
+    res.send('suucess');
 });
 
-
+app.get('/uploads', (req, res) => {
+    res.sendFile(path.join(__dirname, 'storage', 'uploads'));
+});
 
 // app.use(errorMiddleware);
 
@@ -74,5 +69,4 @@ http.listen(port, () => {
     logger.debug(`Example app listening at http://localhost:${port}`);
 });
 
-
-module.exports = logger
+module.exports = logger;
