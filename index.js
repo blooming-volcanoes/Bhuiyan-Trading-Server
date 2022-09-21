@@ -59,11 +59,8 @@ app.get('/log', (req, res) => {
 
 
 
-app.get('/uploads', (req, res) => {
-    res.sendFile(path.join(__dirname, 'storage', 'uploads'));
-});
 
-app.use(errorMiddleware);
+// app.use(errorMiddleware);
 
 http.listen(port, () => {
     logger.debug(`Example app listening at http://localhost:${port}`);
