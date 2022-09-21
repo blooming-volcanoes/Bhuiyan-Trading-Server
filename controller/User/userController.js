@@ -99,6 +99,30 @@ let transporter = nodemailer.createTransport({
 })
 
 
+
+/** Get the user */
+
+
+exports.getUserDetails = catchAsyncError(async (req, res, next) => { 
+
+    const id = req.user.id;
+
+    let query = "select email, id, role from user where id=?"
+
+    db.query(query,[id], (err,result)=>{
+        if(!err){
+            console.log(result[0]);
+            res.status(200).json({success: true})
+        }else{
+            res.status(401).json({msg: "Login to get access"})
+        }
+    })
+
+}
+)
+
+
+
 exports.forgetPassword = catchAsyncError(async (req, res, next) => { 
   let user = req.body;
   let query = "select email, password from user where email=?"

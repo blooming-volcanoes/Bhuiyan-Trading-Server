@@ -12,7 +12,9 @@ const port = process.env.PORT || 3000;
 // middleware
 const errorMiddleware = require('./middleware/error');
 
-app.use(cors());
+app.use(cors({
+  
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -68,7 +70,7 @@ app.post('/postImg',upload.single("uploadFile"), (req, res, next)=>{
 
 
 
-// app.use(errorMiddleware);
+app.use(errorMiddleware);
 
 http.listen(port, () => {
     logger.debug(`Example app listening at http://localhost:${port}`);

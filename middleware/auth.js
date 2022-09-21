@@ -11,6 +11,9 @@ const logger = log4js.getLogger();
 
 
 exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
+    if(!req.headers.authorization){
+        return next(new errorHandler('Please Login to access this resource', 401));
+    }
     const authorization = req.headers.authorization.split(' ')[1];
     if (!authorization) {
         return next(new errorHandler('Please Login to access this resource', 401));
