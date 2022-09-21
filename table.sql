@@ -59,7 +59,8 @@ create table posts(
 )
 
 
-create table gallary (
+create table gallery (
      id int not null AUTO_INCREMENT,
      url text not null,
+     primary key(id)
 )

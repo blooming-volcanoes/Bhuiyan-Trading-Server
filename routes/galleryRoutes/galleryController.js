@@ -27,13 +27,14 @@ function bulkUpload(req, res) {
 /** Insert image link in sql db */
 
 function createImgGallery(req, res){
-    let query = "insert into  gallary (url) values (?)";
+    let url = req.body.url;
+    let query = "insert into gallery (url) values (?)";
 
     db.query(query,[url], (err,result)=>{
         if(!err){
             res.status(200).json({ msg: "Success"});
         }else{
-            res.status(200).json({ msg: err });
+            res.status(500).json({ msg: err });
         }
     })
 }
@@ -42,12 +43,12 @@ function createImgGallery(req, res){
 /** Get all image link from db */
 
 function getAllImg(req, res){
-    let query = "select * from gallary";
+    let query = "select * from gallery";
 
     db.query(query, (err,result)=>{
         if(!err){
             if(result.length >0){
-                result
+               console.log( result);
             }else{
                 res.status(500).json({ msg: "something went wrong"});
             }
