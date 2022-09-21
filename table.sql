@@ -38,7 +38,7 @@ create table products(
     shortDesc   varchar(255),
     productDesc varchar(255),
     featureImg  varchar(255),
-    gallaryImg  LONGTEXT,
+    gallaryImg  text,
     primary key(id)
 )
 

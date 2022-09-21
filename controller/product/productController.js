@@ -4,6 +4,7 @@ const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 const log4js = require('log4js');
+const { getImgGallaryArr } = require('../../services/getArr');
 const logger = log4js.getLogger();
 
 
@@ -32,11 +33,12 @@ exports.getProduct =  catchAsyncError(async (req, res, next) => {
     let query = "select p.id, p.title, p.shortDesc,p.productDesc, p.featureImg,p.unit, p.gallaryImg, p.currency, p.price, pc.id as categoryId, pc.categoryName as categoryName from products as p INNER JOIN category as pc where p.categoryId = pc.id";
 
     db.query(query, (err, result) => {
-        console.log(err, result,"who");
+
         if (!err) {
-            result[0].gallaryImg.split(";")
-            let newO = Object.assign(result[0], {gallaryImg:result[0].gallaryImg.split(";")} )
-            return res.status(200).json(newO)
+            // console.log(result);
+         let getAll = getImgGallaryArr(result);
+            // let newO = Object.assign(result[0], {gallaryImg:result[0].gallaryImg.split(";")} )
+            return res.status(200).json(getAll)
         } else {
             return res.status(500).json(err);
         }

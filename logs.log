@@ -818,3 +818,349 @@
 [2022-09-21T19:42:35.966] [DEBUG] default - Example app listening at http://localhost:5000
 [2022-09-21T19:42:36.046] [DEBUG] default - null err
 [2022-09-21T19:42:36.046] [DEBUG] default - Db connection successful
+[2022-09-21T19:44:12.550] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:44:12.602] [DEBUG] default - null err
+[2022-09-21T19:44:12.603] [DEBUG] default - Db connection successful
+[2022-09-21T19:47:04.638] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:47:04.758] [DEBUG] default - null err
+[2022-09-21T19:47:04.758] [DEBUG] default - Db connection successful
+[2022-09-21T19:47:26.813] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:47:26.922] [DEBUG] default - null err
+[2022-09-21T19:47:26.922] [DEBUG] default - Db connection successful
+[2022-09-21T19:49:24.311] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:49:24.402] [DEBUG] default - null err
+[2022-09-21T19:49:24.402] [DEBUG] default - Db connection successful
+[2022-09-21T19:50:45.732] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:50:45.944] [DEBUG] default - null err
+[2022-09-21T19:50:45.944] [DEBUG] default - Db connection successful
+[2022-09-21T19:51:49.076] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:51:49.148] [DEBUG] default - null err
+[2022-09-21T19:51:49.148] [DEBUG] default - Db connection successful
+[2022-09-21T19:52:34.602] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:52:34.727] [DEBUG] default - null err
+[2022-09-21T19:52:34.727] [DEBUG] default - Db connection successful
+[2022-09-21T19:54:34.111] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:54:34.262] [DEBUG] default - null err
+[2022-09-21T19:54:34.262] [DEBUG] default - Db connection successful
+[2022-09-21T19:55:11.884] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:55:11.982] [DEBUG] default - null err
+[2022-09-21T19:55:11.983] [DEBUG] default - Db connection successful
+[2022-09-21T19:56:46.066] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:56:46.126] [DEBUG] default - null err
+[2022-09-21T19:56:46.126] [DEBUG] default - Db connection successful
+[2022-09-21T20:28:52.489] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:28:52.582] [DEBUG] default - null err
+[2022-09-21T20:28:52.582] [DEBUG] default - Db connection successful
+[2022-09-21T20:29:06.929] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:29:07.026] [DEBUG] default - null err
+[2022-09-21T20:29:07.026] [DEBUG] default - Db connection successful
+[2022-09-21T20:30:05.075] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:30:05.170] [DEBUG] default - null err
+[2022-09-21T20:30:05.171] [DEBUG] default - Db connection successful
+[2022-09-21T20:30:13.134] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:30:13.270] [DEBUG] default - null err
+[2022-09-21T20:30:13.270] [DEBUG] default - Db connection successful
+[2022-09-21T20:31:49.221] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:31:49.277] [DEBUG] default - null err
+[2022-09-21T20:31:49.277] [DEBUG] default - Db connection successful
+[2022-09-21T20:32:26.320] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:32:26.368] [DEBUG] default - null err
+[2022-09-21T20:32:26.368] [DEBUG] default - Db connection successful
+[2022-09-21T20:32:36.412] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:32:36.496] [DEBUG] default - null err
+[2022-09-21T20:32:36.496] [DEBUG] default - Db connection successful
+[2022-09-21T20:33:21.763] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:33:21.870] [DEBUG] default - null err
+[2022-09-21T20:33:21.870] [DEBUG] default - Db connection successful
+[2022-09-21T20:33:29.835] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:33:29.895] [DEBUG] default - null err
+[2022-09-21T20:33:29.895] [DEBUG] default - Db connection successful
+[2022-09-21T20:33:57.299] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:33:57.374] [DEBUG] default - null err
+[2022-09-21T20:33:57.374] [DEBUG] default - Db connection successful
+[2022-09-21T20:34:26.938] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:34:27.028] [DEBUG] default - null err
+[2022-09-21T20:34:27.028] [DEBUG] default - Db connection successful
+[2022-09-21T20:34:43.871] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:34:43.973] [DEBUG] default - null err
+[2022-09-21T20:34:43.973] [DEBUG] default - Db connection successful
+[2022-09-21T20:37:25.184] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:37:25.273] [DEBUG] default - null err
+[2022-09-21T20:37:25.274] [DEBUG] default - Db connection successful
+[2022-09-21T20:37:43.030] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:37:43.154] [DEBUG] default - null err
+[2022-09-21T20:37:43.154] [DEBUG] default - Db connection successful
+[2022-09-21T20:38:33.989] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:38:34.068] [DEBUG] default - null err
+[2022-09-21T20:38:34.068] [DEBUG] default - Db connection successful
+[2022-09-21T20:39:44.457] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:39:44.561] [DEBUG] default - null err
+[2022-09-21T20:39:44.561] [DEBUG] default - Db connection successful
+[2022-09-21T20:45:35.213] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:45:35.311] [DEBUG] default - null err
+[2022-09-21T20:45:35.312] [DEBUG] default - Db connection successful
+[2022-09-21T20:45:38.249] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:45:38.315] [DEBUG] default - null err
+[2022-09-21T20:45:38.315] [DEBUG] default - Db connection successful
+[2022-09-21T20:46:30.954] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:46:31.042] [DEBUG] default - null err
+[2022-09-21T20:46:31.042] [DEBUG] default - Db connection successful
+[2022-09-21T20:46:59.792] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:46:59.893] [DEBUG] default - null err
+[2022-09-21T20:46:59.894] [DEBUG] default - Db connection successful
+[2022-09-21T20:48:32.966] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:48:33.127] [DEBUG] default - null err
+[2022-09-21T20:48:33.128] [DEBUG] default - Db connection successful
+[2022-09-21T20:48:35.888] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:48:35.998] [DEBUG] default - null err
+[2022-09-21T20:48:35.998] [DEBUG] default - Db connection successful
+[2022-09-21T20:50:02.080] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:50:02.176] [DEBUG] default - null err
+[2022-09-21T20:50:02.177] [DEBUG] default - Db connection successful
+[2022-09-21T20:51:02.062] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:51:02.149] [DEBUG] default - null err
+[2022-09-21T20:51:02.150] [DEBUG] default - Db connection successful
+[2022-09-21T20:57:33.226] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:57:33.295] [DEBUG] default - null err
+[2022-09-21T20:57:33.295] [DEBUG] default - Db connection successful
+[2022-09-21T20:57:37.850] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T20:57:37.892] [DEBUG] default - null err
+[2022-09-21T20:57:37.892] [DEBUG] default - Db connection successful
+[2022-09-21T21:06:25.217] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:06:25.331] [DEBUG] default - null err
+[2022-09-21T21:06:25.332] [DEBUG] default - Db connection successful
+[2022-09-21T21:06:47.964] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:06:48.057] [DEBUG] default - null err
+[2022-09-21T21:06:48.058] [DEBUG] default - Db connection successful
+[2022-09-21T21:13:03.627] [DEBUG] default - null [
+  {
+    email: 'foortiawal@gmail.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'awal',
+    id: 13
+  }
+] from login user
+[2022-09-21T21:13:03.631] [DEBUG] default - {
+  email: 'foortiawal@gmail.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'awal',
+  id: 13
+} from token
+[2022-09-21T21:13:03.636] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZm9vcnRpYXdhbEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzc3MzE4MywiZXhwIjoxNjYzODU5NTgzfQ.XevTxk80PocSHZUk9NEx-duPKn_jN3Jqo1mLiX-xBoA identify jwt token
+[2022-09-21T21:14:01.777] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663773183,
+  exp: 1663859583
+} is authenticated file
+[2022-09-21T21:14:01.777] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663773183,
+  exp: 1663859583
+} req user
+[2022-09-21T21:14:01.777] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663773183,
+  exp: 1663859583
+} authorize roles
+[2022-09-21T21:14:26.323] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:14:26.382] [DEBUG] default - null err
+[2022-09-21T21:14:26.382] [DEBUG] default - Db connection successful
+[2022-09-21T21:15:35.744] [DEBUG] default - null [
+  {
+    email: 'riad@gmail.com',
+    password: '123456',
+    role: 'admin',
+    status: null,
+    name: 'human',
+    id: 1
+  }
+] from login user
+[2022-09-21T21:15:35.745] [DEBUG] default - {
+  email: 'riad@gmail.com',
+  password: '123456',
+  role: 'admin',
+  status: null,
+  name: 'human',
+  id: 1
+} from token
+[2022-09-21T21:15:35.751] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyaWFkQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2Mzc3MzMzNSwiZXhwIjoxNjYzODU5NzM1fQ.mTvrL5ET4YfGYmmHbySzWYrHShnYzehMZlXePvj-gn4 identify jwt token
+[2022-09-21T21:15:52.462] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:15:52.462] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:15:52.462] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T21:16:03.921] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:16:03.922] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:16:03.922] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T21:16:03.930] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-21T21:16:08.034] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:16:08.034] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:16:08.034] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T21:16:08.039] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 2,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-21T21:16:09.584] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:16:09.584] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:16:09.584] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T21:16:09.589] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 3,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-21T21:17:50.057] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:17:50.143] [DEBUG] default - null err
+[2022-09-21T21:17:50.143] [DEBUG] default - Db connection successful
+[2022-09-21T21:18:04.583] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:18:04.682] [DEBUG] default - null err
+[2022-09-21T21:18:04.682] [DEBUG] default - Db connection successful
+[2022-09-21T21:18:30.104] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:18:30.197] [DEBUG] default - null err
+[2022-09-21T21:18:30.197] [DEBUG] default - Db connection successful
+[2022-09-21T21:19:08.957] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:19:08.957] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:19:08.957] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T21:19:08.968] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 4,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-21T21:19:30.855] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:19:30.961] [DEBUG] default - null err
+[2022-09-21T21:19:30.962] [DEBUG] default - Db connection successful
+[2022-09-21T21:20:15.107] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:20:15.191] [DEBUG] default - null err
+[2022-09-21T21:20:15.191] [DEBUG] default - Db connection successful
+[2022-09-21T21:21:32.892] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:21:33.038] [DEBUG] default - null err
+[2022-09-21T21:21:33.038] [DEBUG] default - Db connection successful
+[2022-09-21T21:32:54.321] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:32:54.436] [DEBUG] default - null err
+[2022-09-21T21:32:54.436] [DEBUG] default - Db connection successful
+[2022-09-21T21:36:03.035] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:36:03.116] [DEBUG] default - null err
+[2022-09-21T21:36:03.116] [DEBUG] default - Db connection successful
+[2022-09-21T21:37:01.999] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:37:02.327] [DEBUG] default - null err
+[2022-09-21T21:37:02.327] [DEBUG] default - Db connection successful
+[2022-09-21T21:37:53.971] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:37:54.058] [DEBUG] default - null err
+[2022-09-21T21:37:54.058] [DEBUG] default - Db connection successful
+[2022-09-21T21:38:52.842] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:38:52.919] [DEBUG] default - null err
+[2022-09-21T21:38:52.919] [DEBUG] default - Db connection successful

@@ -1,5 +1,6 @@
 const path = require('path');
 const db = require('../../db/connection');
+const {getArray} = require('../../services/getArr');
 
 
 function singleUpload(req, res) {
@@ -43,12 +44,14 @@ function createImgGallery(req, res){
 /** Get all image link from db */
 
 function getAllImg(req, res){
-    let query = "select * from gallery";
+    let query = "select url from gallery";
 
     db.query(query, (err,result)=>{
         if(!err){
             if(result.length >0){
-               console.log( result);
+            //    console.log( result);
+              let img =  getArray(result);
+              res.status(500).json(img);
             }else{
                 res.status(500).json({ msg: "something went wrong"});
             }
