@@ -61,5 +61,5 @@ create table posts(
 
 create table gallary (
      id int not null AUTO_INCREMENT,
-     url text
+     url text not null,
 )

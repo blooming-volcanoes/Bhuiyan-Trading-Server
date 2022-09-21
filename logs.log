@@ -725,3 +725,66 @@
 [2022-09-21T13:34:45.442] [DEBUG] default - Example app listening at http://localhost:5000
 [2022-09-21T13:34:45.554] [DEBUG] default - null err
 [2022-09-21T13:34:45.554] [DEBUG] default - Db connection successful
+[2022-09-21T13:39:13.199] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T13:39:13.269] [DEBUG] default - null err
+[2022-09-21T13:39:13.269] [DEBUG] default - Db connection successful
+[2022-09-21T13:44:02.801] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T13:44:02.929] [DEBUG] default - null err
+[2022-09-21T13:44:02.930] [DEBUG] default - Db connection successful
+[2022-09-21T13:44:32.061] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T13:44:32.173] [DEBUG] default - null err
+[2022-09-21T13:44:32.174] [DEBUG] default - Db connection successful
+[2022-09-21T13:49:34.599] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T13:49:34.680] [DEBUG] default - null err
+[2022-09-21T13:49:34.680] [DEBUG] default - Db connection successful
+[2022-09-21T19:06:25.150] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:06:25.306] [DEBUG] default - null err
+[2022-09-21T19:06:25.306] [DEBUG] default - Db connection successful
+[2022-09-21T19:07:31.455] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} is authenticated file
+[2022-09-21T19:07:31.456] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} req user
+[2022-09-21T19:08:36.707] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:08:36.749] [DEBUG] default - null err
+[2022-09-21T19:08:36.749] [DEBUG] default - Db connection successful
+[2022-09-21T19:08:45.119] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} is authenticated file
+[2022-09-21T19:08:45.119] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} req user
+[2022-09-21T19:10:05.395] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T19:10:05.443] [DEBUG] default - null err
+[2022-09-21T19:10:05.443] [DEBUG] default - Db connection successful
+[2022-09-21T19:10:08.512] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} is authenticated file
+[2022-09-21T19:10:08.512] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663739353,
+  exp: 1663825753
+} req user

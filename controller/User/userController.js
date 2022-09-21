@@ -111,8 +111,8 @@ exports.getUserDetails = catchAsyncError(async (req, res, next) => {
 
     db.query(query,[id], (err,result)=>{
         if(!err){
-            console.log(result[0]);
-            res.status(200).json({success: true})
+           let user = (result[0]);
+            res.status(200).json({success: "true",  user},)
         }else{
             res.status(401).json({msg: "Login to get access"})
         }
@@ -198,6 +198,11 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
         }
     })
 
+})
+
+
+exports.changePassword = catchAsyncError(async (req, res, next) => { 
+    
 })
 
 
