@@ -76,14 +76,14 @@ function getFiles (req, res){
         if(!err){
             console.log(files,"all")
             if(files.length>0){
+                let arr = []
 
                 files.forEach(file=>{
                   const url = `${HOST}/uploads/${file}`
-                    console.log(url);
+                    arr.push(url);
                 })
 
-
-
+                return res.status(200).json(arr);
             }else{
                return res.status(400).json({ msg: "Folder is empty"});
             }
@@ -94,4 +94,21 @@ function getFiles (req, res){
 }
 
 
-module.exports = { singleUpload, bulkUpload, createImgGallery, getAllImg, getFiles };
+
+ /** delete file from folder */
+
+
+ function deleteFile(req, res){
+    const {name} = req.params;
+    fs.unlink(directoryPath+"/"+name, (err)=>{
+        if(!err){
+            return res.status(200).json({ msg: "file deleted sucessfullly"}); 
+        }else{
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        }
+    })
+ }
+
+
+
+module.exports = { singleUpload, bulkUpload, createImgGallery, getAllImg, getFiles, deleteFile };
