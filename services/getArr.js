@@ -5,12 +5,12 @@ function getArray(results){
 
     let newO=[];
     for(const result of results ){
-        newO.push( result.url.split(";"))
+      let all = ( result.url.split(";"));
+        newO.push((Object.assign(result, {url:all})));
     }
 
-    let getAll = newO.flatMap(res=>res);
 
-    return getAll;
+    return newO;
 }
 
 function getImgGallaryArr(results){

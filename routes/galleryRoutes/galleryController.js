@@ -1,11 +1,15 @@
 const path = require('path');
 const db = require('../../db/connection');
 const {getArray} = require('../../services/getArr');
+const fs = require('fs');
 
+const directoryPath = path.join(__dirname, "..","..", "storage", "uploads");
+
+const HOST = "https://bhuiyantrad.com"
 
 function singleUpload(req, res) {
     console.log(req.file, "testing");
-    const url = `${process.env.HOST}/uploads/${req.file.filename}`;
+    const url = `${HOST}/uploads/${req.file.filename}`;
     res.send({ url });
 }
 
@@ -17,7 +21,7 @@ function bulkUpload(req, res) {
     let url = [];
     for (let file of files) {
         let name = file.filename
-        url.push(`${process.env.HOST}/uploads/${name}`);
+        url.push(`${HOST}/uploads/${name}`);
         console.log(url);
     };
 
@@ -65,4 +69,29 @@ function getAllImg(req, res){
 
 
 
-module.exports = { singleUpload, bulkUpload, createImgGallery, getAllImg };
+/** Get all the file  */
+
+function getFiles (req, res){
+    fs.readdir(directoryPath, (err, files)=>{
+        if(!err){
+            console.log(files,"all")
+            if(files.length>0){
+
+                files.forEach(file=>{
+                  const url = `${HOST}/uploads/${file}`
+                    console.log(url);
+                })
+
+
+
+            }else{
+               return res.status(400).json({ msg: "Folder is empty"});
+            }
+        }else{
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        }
+    })
+}
+
+
+module.exports = { singleUpload, bulkUpload, createImgGallery, getAllImg, getFiles };

@@ -1164,3 +1164,229 @@
 [2022-09-21T21:38:52.842] [DEBUG] default - Example app listening at http://localhost:5000
 [2022-09-21T21:38:52.919] [DEBUG] default - null err
 [2022-09-21T21:38:52.919] [DEBUG] default - Db connection successful
+[2022-09-21T21:40:12.158] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T21:40:12.216] [DEBUG] default - null err
+[2022-09-21T21:40:12.216] [DEBUG] default - Db connection successful
+[2022-09-21T21:45:26.097] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} is authenticated file
+[2022-09-21T21:45:26.146] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} req user
+[2022-09-21T21:45:26.147] [DEBUG] default - {
+  id: 1,
+  email: 'riad@gmail.com',
+  role: 'admin',
+  iat: 1663773335,
+  exp: 1663859735
+} authorize roles
+[2022-09-21T22:09:50.662] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T22:13:27.405] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T22:37:21.421] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T23:13:47.800] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-21T23:13:47.971] [DEBUG] default - null err
+[2022-09-21T23:13:47.972] [DEBUG] default - Db connection successful
+[2022-09-21T23:14:02.924] [DEBUG] default - null [
+  {
+    email: 'foortiawal@gmail.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'awal',
+    id: 13
+  }
+] from login user
+[2022-09-21T23:14:02.925] [DEBUG] default - {
+  email: 'foortiawal@gmail.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'awal',
+  id: 13
+} from token
+[2022-09-21T23:14:02.929] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoiZm9vcnRpYXdhbEBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzc4MDQ0MiwiZXhwIjoxNjYzODY2ODQyfQ.Kf7BDUDv_76Wv_dnrHatoPTCq2ywY-ukS-eN3N8IRZE identify jwt token
+[2022-09-21T23:14:52.116] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:52.116] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:55.773] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:55.774] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:56.815] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:56.815] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:57.807] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:57.807] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:57.997] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:57.998] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:58.224] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:58.224] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:58.516] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:58.516] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:58.716] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:58.716] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-21T23:14:58.945] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} is authenticated file
+[2022-09-21T23:14:58.945] [DEBUG] default - {
+  id: 13,
+  email: 'foortiawal@gmail.com',
+  role: 'user',
+  iat: 1663780442,
+  exp: 1663866842
+} req user
+[2022-09-22T00:07:44.718] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:07:44.845] [DEBUG] default - null err
+[2022-09-22T00:07:44.845] [DEBUG] default - Db connection successful
+[2022-09-22T00:09:14.005] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:09:14.128] [DEBUG] default - null err
+[2022-09-22T00:09:14.129] [DEBUG] default - Db connection successful
+[2022-09-22T00:10:28.882] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:10:28.954] [DEBUG] default - null err
+[2022-09-22T00:10:28.954] [DEBUG] default - Db connection successful
+[2022-09-22T00:11:41.562] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:11:41.658] [DEBUG] default - null err
+[2022-09-22T00:11:41.659] [DEBUG] default - Db connection successful
+[2022-09-22T00:12:07.438] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:12:07.532] [DEBUG] default - null err
+[2022-09-22T00:12:07.533] [DEBUG] default - Db connection successful
+[2022-09-22T00:12:43.525] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:12:43.614] [DEBUG] default - null err
+[2022-09-22T00:12:43.614] [DEBUG] default - Db connection successful
+[2022-09-22T00:13:09.622] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:13:09.704] [DEBUG] default - null err
+[2022-09-22T00:13:09.705] [DEBUG] default - Db connection successful
+[2022-09-22T00:13:58.668] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:13:58.737] [DEBUG] default - null err
+[2022-09-22T00:13:58.737] [DEBUG] default - Db connection successful
+[2022-09-22T00:15:15.097] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:15:15.154] [DEBUG] default - null err
+[2022-09-22T00:15:15.154] [DEBUG] default - Db connection successful
+[2022-09-22T00:16:58.518] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T00:16:58.609] [DEBUG] default - null err
+[2022-09-22T00:16:58.610] [DEBUG] default - Db connection successful
+[2022-09-22T14:09:55.478] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:09:55.799] [DEBUG] default - null err
+[2022-09-22T14:09:55.800] [DEBUG] default - Db connection successful
+[2022-09-22T14:11:08.822] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:11:08.941] [DEBUG] default - null err
+[2022-09-22T14:11:08.941] [DEBUG] default - Db connection successful
+[2022-09-22T14:13:44.325] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:13:44.391] [DEBUG] default - null err
+[2022-09-22T14:13:44.391] [DEBUG] default - Db connection successful
+[2022-09-22T14:13:49.585] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:13:49.657] [DEBUG] default - null err
+[2022-09-22T14:13:49.657] [DEBUG] default - Db connection successful
+[2022-09-22T14:15:16.830] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:15:16.890] [DEBUG] default - null err
+[2022-09-22T14:15:16.890] [DEBUG] default - Db connection successful
+[2022-09-22T14:17:47.568] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:17:47.639] [DEBUG] default - null err
+[2022-09-22T14:17:47.639] [DEBUG] default - Db connection successful
+[2022-09-22T14:18:16.017] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-22T14:18:16.102] [DEBUG] default - null err
+[2022-09-22T14:18:16.103] [DEBUG] default - Db connection successful

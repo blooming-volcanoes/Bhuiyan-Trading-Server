@@ -19,7 +19,7 @@ exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
         return next(new errorHandler('Please Login to access this resource', 401));
     }
 
-    const decodeData = await jwt.verify(authorization, process.env.JWT_SECRET);
+    const decodeData = await jwt.verify(authorization, "secret");
     req.user = (decodeData);
     logger.debug(req.user, "is authenticated file");
     if(req.user){
