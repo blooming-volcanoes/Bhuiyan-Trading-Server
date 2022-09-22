@@ -35,8 +35,18 @@ log4js.configure({
     categories: { default: { appenders: ['everything'], level: 'ALL' } },
 });
 
-app.use(express.static(path.join(__dirname, 'storage')));
 
+
+app.use(express.static(path.join(__dirname, 'storage')));
+app.use((req, res, next)=>{
+    const send = res.send;
+    res.send=(data)=>{
+        res.setHeader( 'X-Powered-By', 'Blooming Volcanoes' );
+        return send.call(res, data);
+
+    }
+    next();
+})
 app.use('/user', userRoutes);
 app.use('/category', categoryRoutes);
 app.use('/product', productRoute);
@@ -50,6 +60,7 @@ const http = require('http').createServer(app);
 app.get('/', (req, res) => {
     res.send('hi');
     logger.debug('odo');
+  
 });
 
 app.get('/log', (req, res) => {

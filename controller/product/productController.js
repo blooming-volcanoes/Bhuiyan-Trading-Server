@@ -51,7 +51,7 @@ exports.getProduct =  catchAsyncError(async (req, res, next) => {
 
 exports.getByCategoryId =  catchAsyncError(async (req, res, next) => { 
     const id = req.params.id
-    let query = "select id, title, price, shortDesc from products where categoryId=?";
+    let query = "select id, title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId from products where categoryId=?";
 
     db.query(query, [id], (err, result)=>{
         if(!err){
