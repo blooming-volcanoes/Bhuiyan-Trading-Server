@@ -1713,3 +1713,283 @@
 [2022-09-23T20:34:03.689] [DEBUG] default - Example app listening at http://localhost:5000
 [2022-09-23T20:34:03.735] [DEBUG] default - null err
 [2022-09-23T20:34:03.735] [DEBUG] default - Db connection successful
+[2022-09-23T20:42:15.749] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:42:15.807] [DEBUG] default - null err
+[2022-09-23T20:42:15.808] [DEBUG] default - Db connection successful
+[2022-09-23T20:57:26.807] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:57:26.851] [DEBUG] default - null err
+[2022-09-23T20:57:26.852] [DEBUG] default - Db connection successful
+[2022-09-23T20:58:02.234] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:58:02.288] [DEBUG] default - null err
+[2022-09-23T20:58:02.289] [DEBUG] default - Db connection successful
+[2022-09-23T20:58:39.149] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:58:39.232] [DEBUG] default - null err
+[2022-09-23T20:58:39.232] [DEBUG] default - Db connection successful
+[2022-09-23T21:07:53.330] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:07:53.397] [DEBUG] default - null err
+[2022-09-23T21:07:53.397] [DEBUG] default - Db connection successful
+[2022-09-23T21:08:45.487] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:08:45.555] [DEBUG] default - null err
+[2022-09-23T21:08:45.555] [DEBUG] default - Db connection successful
+[2022-09-23T21:08:54.655] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:08:54.694] [DEBUG] default - null err
+[2022-09-23T21:08:54.695] [DEBUG] default - Db connection successful
+[2022-09-23T21:09:10.741] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:09:10.827] [DEBUG] default - null err
+[2022-09-23T21:09:10.827] [DEBUG] default - Db connection successful
+[2022-09-23T21:09:35.439] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:09:35.515] [DEBUG] default - null err
+[2022-09-23T21:09:35.515] [DEBUG] default - Db connection successful
+[2022-09-23T21:10:31.613] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:10:31.716] [DEBUG] default - null err
+[2022-09-23T21:10:31.716] [DEBUG] default - Db connection successful
+[2022-09-23T21:11:39.528] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:11:39.591] [DEBUG] default - null err
+[2022-09-23T21:11:39.591] [DEBUG] default - Db connection successful
+[2022-09-23T21:11:50.325] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:11:50.399] [DEBUG] default - null err
+[2022-09-23T21:11:50.399] [DEBUG] default - Db connection successful
+[2022-09-23T21:12:21.245] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:12:21.309] [DEBUG] default - null err
+[2022-09-23T21:12:21.309] [DEBUG] default - Db connection successful
+[2022-09-23T21:12:55.469] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:12:55.535] [DEBUG] default - null err
+[2022-09-23T21:12:55.535] [DEBUG] default - Db connection successful
+[2022-09-23T21:17:44.284] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:17:44.334] [DEBUG] default - null err
+[2022-09-23T21:17:44.334] [DEBUG] default - Db connection successful
+[2022-09-23T21:41:05.513] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T21:41:05.516] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T21:41:05.517] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T21:42:47.792] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T21:42:47.792] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T21:42:47.793] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T21:42:47.812] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T21:45:30.994] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:45:31.064] [DEBUG] default - null err
+[2022-09-23T21:45:31.064] [DEBUG] default - Db connection successful
+[2022-09-23T21:45:58.867] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T21:45:58.869] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T21:45:58.869] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T21:45:58.896] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 2,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T21:46:54.059] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T21:46:54.060] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T21:46:54.061] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T21:46:54.071] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 3,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T21:48:38.306] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:48:38.388] [DEBUG] default - null err
+[2022-09-23T21:48:38.388] [DEBUG] default - Db connection successful
+[2022-09-23T21:49:00.700] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:49:00.813] [DEBUG] default - null err
+[2022-09-23T21:49:00.814] [DEBUG] default - Db connection successful
+[2022-09-23T21:52:42.467] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T21:52:42.548] [DEBUG] default - null err
+[2022-09-23T21:52:42.549] [DEBUG] default - Db connection successful
+[2022-09-23T21:58:19.327] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T21:58:19.333] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T21:58:19.333] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T21:58:19.405] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 4,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T22:04:34.801] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:04:34.841] [DEBUG] default - null err
+[2022-09-23T22:04:34.841] [DEBUG] default - Db connection successful
+[2022-09-23T22:06:13.318] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:06:13.356] [DEBUG] default - null err
+[2022-09-23T22:06:13.356] [DEBUG] default - Db connection successful
+[2022-09-23T22:07:25.989] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:07:26.041] [DEBUG] default - null err
+[2022-09-23T22:07:26.041] [DEBUG] default - Db connection successful
+[2022-09-23T22:07:35.765] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:07:35.877] [DEBUG] default - null err
+[2022-09-23T22:07:35.877] [DEBUG] default - Db connection successful
+[2022-09-23T22:07:56.770] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:07:56.849] [DEBUG] default - null err
+[2022-09-23T22:07:56.850] [DEBUG] default - Db connection successful
+[2022-09-23T22:08:44.847] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:08:44.914] [DEBUG] default - null err
+[2022-09-23T22:08:44.915] [DEBUG] default - Db connection successful
+[2022-09-23T22:12:12.265] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:12:12.379] [DEBUG] default - null err
+[2022-09-23T22:12:12.379] [DEBUG] default - Db connection successful
+[2022-09-23T22:12:59.536] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:12:59.589] [DEBUG] default - null err
+[2022-09-23T22:12:59.589] [DEBUG] default - Db connection successful
+[2022-09-23T22:14:18.195] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:14:18.271] [DEBUG] default - null err
+[2022-09-23T22:14:18.272] [DEBUG] default - Db connection successful
+[2022-09-23T22:21:41.155] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:21:41.240] [DEBUG] default - null err
+[2022-09-23T22:21:41.241] [DEBUG] default - Db connection successful
+[2022-09-23T22:22:18.888] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:22:18.964] [DEBUG] default - null err
+[2022-09-23T22:22:18.964] [DEBUG] default - Db connection successful
+[2022-09-23T22:23:06.329] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:23:06.393] [DEBUG] default - null err
+[2022-09-23T22:23:06.393] [DEBUG] default - Db connection successful
+[2022-09-23T22:23:28.465] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:23:28.504] [DEBUG] default - null err
+[2022-09-23T22:23:28.504] [DEBUG] default - Db connection successful
+[2022-09-23T22:23:47.639] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:23:47.692] [DEBUG] default - null err
+[2022-09-23T22:23:47.693] [DEBUG] default - Db connection successful
+[2022-09-23T22:35:20.933] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T22:35:20.937] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T22:35:20.938] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T22:35:21.084] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 5,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T22:35:43.570] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:35:43.671] [DEBUG] default - null err
+[2022-09-23T22:35:43.671] [DEBUG] default - Db connection successful
+[2022-09-23T22:36:08.273] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:36:08.311] [DEBUG] default - null err
+[2022-09-23T22:36:08.311] [DEBUG] default - Db connection successful
+[2022-09-23T22:37:42.426] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:37:42.504] [DEBUG] default - null err
+[2022-09-23T22:37:42.504] [DEBUG] default - Db connection successful
+[2022-09-23T22:38:10.448] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:38:10.643] [DEBUG] default - null err
+[2022-09-23T22:38:10.643] [DEBUG] default - Db connection successful
+[2022-09-23T22:38:12.811] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T22:38:12.858] [DEBUG] default - null err
+[2022-09-23T22:38:12.858] [DEBUG] default - Db connection successful

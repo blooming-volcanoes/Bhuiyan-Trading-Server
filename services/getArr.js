@@ -13,13 +13,14 @@ function getArray(results){
     return newO;
 }
 
-function getImgGallaryArr(results){
+function getProductArr(results){
 
     let newO=[];
     for(const result of results ){
         // newO.push( result.gallaryImg.split(";"))
         let img = result.gallaryImg.split(";");
-        newO.push((Object.assign(result, {gallaryImg:img})));
+        let subCategory = result.subCategoryName.split(";")
+        newO.push((Object.assign(result, {gallaryImg:img, subCategoryName:subCategory})));
     }
 
     return newO;
@@ -31,14 +32,14 @@ function getCategoryArr (results){
 
     for(const result of results ){
         // newO.push( result.gallaryImg.split(";"))
-        let img = result.gallaryImg.split(";");
-        let subCategory = result.subCategory.split(";");
-        newO.push((Object.assign(result, {gallaryImg:img})));
+        let img = result.galleryImg.split(";");
+        let subCategory = result.subCategoryName.split(";");
+        newO.push((Object.assign(result, {galleryImg:img, subCategoryName: subCategory})));
     }
 
-    console.log(newO);
+   return newO;
 }
 
 
 
-module.exports = {getArray, getImgGallaryArr};
+module.exports = {getArray, getProductArr, getCategoryArr};

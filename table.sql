@@ -10,10 +10,12 @@ create table user(
 )
 
 
-create table category(
+create table productcategory(
     id int NOT NULL AUTO_INCREMENT,
     categoryName varchar(255) NOT NULL,
-    subCategoryName varchar(255) NOT NULL,
+    subCategoryName text NOT NULL,
+    featureImg text NOT NULL,
+    galleryImg text NOT NULL,
     primary key(id),
     UNIQUE(categoryName)
 )
@@ -35,11 +37,12 @@ create table products(
     price       varchar(191),
     currency    varchar(191),
     unit        varchar(191),
-    shortDesc   varchar(255),
-    productDesc varchar(255),
-    featureImg  varchar(255),
+    shortDesc   text,
+    productDesc text,
+    featureImg  text,
     gallaryImg  text,
-    subCategory text,
+    categoryName text,
+    subCategoryName text,
     primary key(id)
 )
 

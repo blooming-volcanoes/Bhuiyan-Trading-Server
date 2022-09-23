@@ -4,18 +4,18 @@ const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 const log4js = require('log4js');
-const { getImgGallaryArr } = require('../../services/getArr');
+const {  getProductArr } = require('../../services/getArr');
 const logger = log4js.getLogger();
 
 
-
+/** Create Product */
 exports.createProduct = catchAsyncError(async (req, res, next) => {
 
-    const {title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId, subCategory } = req.body;
+    const {title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId,categoryName,subCategoryName } = req.body;
 
-    let query = "insert into products (title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId, subCategory) values (?,?,?,?,?,?,?,?,?,?)";
+    let query = "insert into products (title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId,categoryName, subCategoryName) values (?,?,?,?,?,?,?,?,?,?,?)";
 
-    db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId, subCategory], (err, result) => {
+    db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId,categoryName, subCategoryName], (err, result) => {
         if (!err) {
             logger.debug(result,"from create product");
             return res.status(200).json({ msg: "Product Added successfully" })
@@ -28,10 +28,12 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
 
 
+/** Get a single Product by passing id */
+
 exports.getSingleProduct =  catchAsyncError(async (req, res, next) => { 
     console.log("id");
     let {id} = req.params;
-    let query = "select id, title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId from products where id=?";
+    let query = "select * from products where id=?";
     db.query(query, [id], (err, result)=>{
         if(!err){
             return res.status(200).json(result);
@@ -44,14 +46,17 @@ exports.getSingleProduct =  catchAsyncError(async (req, res, next) => {
 
 
 
+
+/** Get all the Product */
+
 exports.getProduct =  catchAsyncError(async (req, res, next) => { 
-    let query = "select p.id, p.title, p.shortDesc,p.productDesc, p.featureImg,p.unit, p.gallaryImg, p.currency, p.price, pc.id as categoryId, pc.categoryName as categoryName, pc.subCategoryName as subCategoryName  from products as p INNER JOIN category as pc where p.categoryId = pc.id";
+    let query = "select * from products";
 
     db.query(query, (err, result) => {
 
         if (!err) {
             // console.log(result);
-         let getAll = getImgGallaryArr(result);
+         let getAll = getProductArr(result);
             // let newO = Object.assign(result[0], {gallaryImg:result[0].gallaryImg.split(";")} )
             return res.status(200).json(getAll)
         } else {
@@ -63,14 +68,36 @@ exports.getProduct =  catchAsyncError(async (req, res, next) => {
 
 
 
+/** Get Product by passing CategoryID */
 
 exports.getByCategoryId =  catchAsyncError(async (req, res, next) => { 
     const id = req.params.id
-    let query = "select id, title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg,categoryId from products where categoryId=?";
+    let query = "select * from products where categoryId=?";
 
     db.query(query, [id], (err, result)=>{
         if(!err){
-            return res.status(200).json(result);
+            let getAll = getProductArr(result);
+            // let newO = Object.assign(result[0], {gallaryImg:result[0].gallaryImg.split(";")} )
+            return res.status(200).json(getAll)
+        }else{
+            return res.status(500).json(err);
+        }
+    })
+})
+
+
+/** Get Product by passing sub-Category Name */
+
+exports.getBySubCategory =  catchAsyncError(async (req, res, next) => { 
+    const {name} = req.params;
+    let get = '%name%';
+    let query = `select * from products where subCategoryName like '%${name}%'`;
+
+    db.query(query, (err, result)=>{
+        if(!err){
+            // console.log(result,"eror", err);
+            let getAll = getProductArr(result);
+            return res.status(200).json(getAll)
         }else{
             return res.status(500).json(err);
         }
