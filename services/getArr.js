@@ -26,5 +26,19 @@ function getImgGallaryArr(results){
 }
 
 
+function getCategoryArr (results){
+    let newO = [];
+
+    for(const result of results ){
+        // newO.push( result.gallaryImg.split(";"))
+        let img = result.gallaryImg.split(";");
+        let subCategory = result.subCategory.split(";");
+        newO.push((Object.assign(result, {gallaryImg:img})));
+    }
+
+    console.log(newO);
+}
+
+
 
 module.exports = {getArray, getImgGallaryArr};

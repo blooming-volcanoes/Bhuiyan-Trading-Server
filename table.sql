@@ -39,6 +39,7 @@ create table products(
     productDesc varchar(255),
     featureImg  varchar(255),
     gallaryImg  text,
+    subCategory text,
     primary key(id)
 )
 

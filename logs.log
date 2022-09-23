@@ -1460,3 +1460,256 @@
 [2022-09-22T16:32:12.232] [DEBUG] default - Db connection successful
 [2022-09-22T16:32:14.411] [DEBUG] default - odo
 [2022-09-22T18:34:44.445] [DEBUG] default - odo
+[2022-09-23T01:43:50.690] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:43:50.953] [DEBUG] default - null err
+[2022-09-23T01:43:50.953] [DEBUG] default - Db connection successful
+[2022-09-23T01:44:34.386] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:44:34.504] [DEBUG] default - null err
+[2022-09-23T01:44:34.505] [DEBUG] default - Db connection successful
+[2022-09-23T01:45:03.810] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:45:03.897] [DEBUG] default - null err
+[2022-09-23T01:45:03.898] [DEBUG] default - Db connection successful
+[2022-09-23T01:46:29.112] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:46:29.176] [DEBUG] default - null err
+[2022-09-23T01:46:29.176] [DEBUG] default - Db connection successful
+[2022-09-23T01:50:38.897] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:50:38.962] [DEBUG] default - null err
+[2022-09-23T01:50:38.962] [DEBUG] default - Db connection successful
+[2022-09-23T01:54:48.854] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:54:48.963] [DEBUG] default - null err
+[2022-09-23T01:54:48.963] [DEBUG] default - Db connection successful
+[2022-09-23T01:55:12.435] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T01:55:12.830] [DEBUG] default - null err
+[2022-09-23T01:55:12.831] [DEBUG] default - Db connection successful
+[2022-09-23T19:35:05.251] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:35:05.480] [DEBUG] default - null err
+[2022-09-23T19:35:05.480] [DEBUG] default - Db connection successful
+[2022-09-23T19:36:09.860] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:36:09.927] [DEBUG] default - null err
+[2022-09-23T19:36:09.927] [DEBUG] default - Db connection successful
+[2022-09-23T19:37:01.463] [DEBUG] default - null [
+  {
+    email: 'sd@eicoimg.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'hera',
+    id: 11
+  }
+] from login user
+[2022-09-23T19:37:01.466] [DEBUG] default - {
+  email: 'sd@eicoimg.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'hera',
+  id: 11
+} from token
+[2022-09-23T19:37:01.469] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoic2RAZWljb2ltZy5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzk0MDIyMSwiZXhwIjoxNjY0MDI2NjIxfQ.Rk_oIA2RtNlksYsEPG3rP_sK1MMm3nUlot_wtGKvh-4 identify jwt token
+[2022-09-23T19:38:01.389] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:38:01.472] [DEBUG] default - null err
+[2022-09-23T19:38:01.472] [DEBUG] default - Db connection successful
+[2022-09-23T19:38:05.607] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:38:05.657] [DEBUG] default - null err
+[2022-09-23T19:38:05.658] [DEBUG] default - Db connection successful
+[2022-09-23T19:38:30.525] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:38:30.608] [DEBUG] default - null err
+[2022-09-23T19:38:30.608] [DEBUG] default - Db connection successful
+[2022-09-23T19:38:57.904] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:38:57.968] [DEBUG] default - null err
+[2022-09-23T19:38:57.968] [DEBUG] default - Db connection successful
+[2022-09-23T19:39:27.025] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:39:27.126] [DEBUG] default - null err
+[2022-09-23T19:39:27.127] [DEBUG] default - Db connection successful
+[2022-09-23T19:39:39.934] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:39:40.009] [DEBUG] default - null err
+[2022-09-23T19:39:40.010] [DEBUG] default - Db connection successful
+[2022-09-23T19:40:41.238] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:40:41.319] [DEBUG] default - null err
+[2022-09-23T19:40:41.319] [DEBUG] default - Db connection successful
+[2022-09-23T19:47:06.609] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:47:06.694] [DEBUG] default - null err
+[2022-09-23T19:47:06.694] [DEBUG] default - Db connection successful
+[2022-09-23T19:50:18.337] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T19:50:18.415] [DEBUG] default - null err
+[2022-09-23T19:50:18.415] [DEBUG] default - Db connection successful
+[2022-09-23T20:00:42.687] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} is authenticated file
+[2022-09-23T20:00:42.694] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} req user
+[2022-09-23T20:00:42.696] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} authorize roles
+[2022-09-23T20:01:26.694] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} is authenticated file
+[2022-09-23T20:01:26.695] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} req user
+[2022-09-23T20:01:26.697] [DEBUG] default - {
+  id: 11,
+  email: 'sd@eicoimg.com',
+  role: 'user',
+  iat: 1663940221,
+  exp: 1664026621
+} authorize roles
+[2022-09-23T20:01:33.821] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:01:33.897] [DEBUG] default - null err
+[2022-09-23T20:01:33.897] [DEBUG] default - Db connection successful
+[2022-09-23T20:01:34.879] [DEBUG] default - null [
+  {
+    email: 'sd@eicoimg.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'hera',
+    id: 11
+  }
+] from login user
+[2022-09-23T20:01:34.880] [DEBUG] default - {
+  email: 'sd@eicoimg.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'hera',
+  id: 11
+} from token
+[2022-09-23T20:01:34.882] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoic2RAZWljb2ltZy5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzk0MTY5NCwiZXhwIjoxNjY0MDI4MDk0fQ.9l-5w1qyHvB_L1PATJkmX8OVLEq6jWZluJABBl3eVvw identify jwt token
+[2022-09-23T20:01:40.176] [DEBUG] default - null [
+  {
+    email: 'sd@eicoimg.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'hera',
+    id: 11
+  }
+] from login user
+[2022-09-23T20:01:40.177] [DEBUG] default - {
+  email: 'sd@eicoimg.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'hera',
+  id: 11
+} from token
+[2022-09-23T20:01:40.178] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoic2RAZWljb2ltZy5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzk0MTcwMCwiZXhwIjoxNjY0MDI4MTAwfQ.HQ4Qc5_3nnI8TlL-999mzRPRqytbyOKDnpr20cfkBoY identify jwt token
+[2022-09-23T20:01:41.058] [DEBUG] default - null [
+  {
+    email: 'sd@eicoimg.com',
+    password: '123456',
+    role: 'user',
+    status: 'active',
+    name: 'hera',
+    id: 11
+  }
+] from login user
+[2022-09-23T20:01:41.058] [DEBUG] default - {
+  email: 'sd@eicoimg.com',
+  password: '123456',
+  role: 'user',
+  status: 'active',
+  name: 'hera',
+  id: 11
+} from token
+[2022-09-23T20:01:41.059] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsImVtYWlsIjoic2RAZWljb2ltZy5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2Mzk0MTcwMSwiZXhwIjoxNjY0MDI4MTAxfQ.ZNESJyALSbpOETauMRR-M0ZNvMN-u8YhE1udzCQUmjI identify jwt token
+[2022-09-23T20:02:08.241] [DEBUG] default - null [
+  {
+    email: 'sd@nicoimg.com',
+    password: '123456',
+    role: 'admin',
+    status: 'active',
+    name: 'hera',
+    id: 10
+  }
+] from login user
+[2022-09-23T20:02:08.242] [DEBUG] default - {
+  email: 'sd@nicoimg.com',
+  password: '123456',
+  role: 'admin',
+  status: 'active',
+  name: 'hera',
+  id: 10
+} from token
+[2022-09-23T20:02:08.243] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoic2RAbmljb2ltZy5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NjM5NDE3MjgsImV4cCI6MTY2NDAyODEyOH0.ZPX7R5zPF-dLO8D21hLSPzP36Knv4sYMOvIhij_n5YU identify jwt token
+[2022-09-23T20:02:21.131] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T20:02:21.131] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T20:02:21.132] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T20:02:52.533] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:02:52.613] [DEBUG] default - null err
+[2022-09-23T20:02:52.613] [DEBUG] default - Db connection successful
+[2022-09-23T20:02:54.796] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} is authenticated file
+[2022-09-23T20:02:54.797] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} req user
+[2022-09-23T20:02:54.797] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1663941728,
+  exp: 1664028128
+} authorize roles
+[2022-09-23T20:02:54.818] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create product
+[2022-09-23T20:29:26.183] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:29:26.300] [DEBUG] default - null err
+[2022-09-23T20:29:26.300] [DEBUG] default - Db connection successful
+[2022-09-23T20:34:03.689] [DEBUG] default - Example app listening at http://localhost:5000
+[2022-09-23T20:34:03.735] [DEBUG] default - null err
+[2022-09-23T20:34:03.735] [DEBUG] default - Db connection successful

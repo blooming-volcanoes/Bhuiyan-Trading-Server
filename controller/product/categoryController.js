@@ -7,16 +7,16 @@ const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 exports.createCategory =  catchAsyncError(async (req, res, next) => {
-    let {categoryName, subCategoryName} = req.body;
+    let {categoryName, subCategoryName, featureImg, galleryImg} = req.body;
 
-    if(!categoryName || !subCategoryName){
+    if(!categoryName || !subCategoryName || !featureImg || !galleryImg){
         const message = `Both category and sub category filled in`;
               return next(new ErrorHandler(message, 400))
     }
 
     let query = "insert into category(categoryName, subCategoryName) values (?,?)";
 
-    db.query(query, [categoryName, subCategoryName], (err, result)=>{
+    db.query(query, [categoryName, subCategoryName, featureImg, galleryImg], (err, result)=>{
        if(!err && result.affectedRows >0){
            return res.status(200).json({msg: "Category added"})
        }else{
