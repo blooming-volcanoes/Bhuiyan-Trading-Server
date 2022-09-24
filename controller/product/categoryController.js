@@ -21,6 +21,9 @@ exports.createCategory =  catchAsyncError(async (req, res, next) => {
        if(!err && result.affectedRows >0){
            return res.status(200).json({msg: "Category added"})
        }else{
+        if(err.errno == 1062){
+            return res.status(400).json({msg: "Category-name already exist"})
+        }
            return res.status(500).json(err)
        }
     })
@@ -50,9 +53,11 @@ exports.getCategory =  catchAsyncError(async (req, res, next) => {
 
 /** Get Category by Product ID */
 
-exports.getCategoryByID =  catchAsyncError(async (req, res, next) => {
+exports.getCategoryByID = (req, res, next) => {
 
     let {id} = req.params;
+    console.log(id,"chingko");
+    // let getId = ID;
     let query = "select * from productcategory where id=?";
 
     db.query(query,[id], (err, result)=>{
@@ -66,4 +71,4 @@ exports.getCategoryByID =  catchAsyncError(async (req, res, next) => {
 
 
 
-})
+}

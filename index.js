@@ -74,7 +74,7 @@ app.get('/log', (req, res) => {
 // app.use(errorMiddleware);
 
 http.listen(port, () => {
-    logger.debug(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at http://localhost:${port}`);
 });
 
 module.exports = logger;
