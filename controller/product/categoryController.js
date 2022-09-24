@@ -45,3 +45,25 @@ exports.getCategory =  catchAsyncError(async (req, res, next) => {
 
 
 })
+
+
+
+/** Get Category by Product ID */
+
+exports.getCategoryByID =  catchAsyncError(async (req, res, next) => {
+
+    let {id} = req.params;
+    let query = "select * from productcategory where id=?";
+
+    db.query(query,[id], (err, result)=>{
+        if(!err){
+        const all = getCategoryArr(result)
+            return res.status(200).json(all);
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+
+
+
+})
