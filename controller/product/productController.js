@@ -120,6 +120,32 @@ exports.getBySubCategory = catchAsyncError(async (req, res, next) => {
 
 
 
+exports.updateProduct = catchAsyncError(async (req, res, next) => {
+    const id = req.params.id;
+    const { title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg, categoryId, categoryName, subCategoryName } = req.body;
+    query = "update products set ? where id=?";
+
+    db.query(query,[req.body, id], (err, result)=>{
+        if(!err){
+            if(!result.affectedRows === 0){
+                return res.status(400).json({msg:"Your product id is incorrect"});
+            }
+
+            return res.status(200).json({msg:"Your code updated sucessfully"});
+        }else{
+            if(err.errno === 1064){
+
+                return res.status(500).json("err:YOur req.body is empty");
+            }
+            return res.status(500).json(err);
+        }
+    })
+
+
+})
+
+
+
 exports.deleteProduct = catchAsyncError(async (req, res, next) => {
     const id = req.params.id;
 
