@@ -53,7 +53,11 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 /** Get all the Product */
 
 exports.getProduct = catchAsyncError(async (req, res, next) => {
-    let query = "select * from products";
+    var page = parseInt(req.query.page, 10) || 0;
+    var numPerPage = 2;
+var skip = (page-1) * numPerPage;
+var limit = skip + ',' + numPerPage;
+    let query = 'select * from products LIMIT ' + limit;
 
     db.query(query, (err, result) => {
 

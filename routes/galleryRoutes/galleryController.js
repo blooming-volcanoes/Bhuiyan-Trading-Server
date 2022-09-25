@@ -4,12 +4,20 @@ const {getArray} = require('../../services/getArr');
 const fs = require('fs');
 
 const directoryPath = path.join(__dirname, "..","..", "storage", "uploads");
+const directoryPathCategory = path.join(__dirname, "..","..", "storage", "category");
 
-const HOST = "https://bhuiyantrad.com"
+const HOST = "https://api.bhuiyantrad.com"
 
 function singleUpload(req, res) {
     console.log(req.file, "testing");
     const url = `${HOST}/uploads/${req.file.filename}`;
+    res.send({ url });
+}
+
+
+function singleUploadCategory(req, res) {
+    console.log(req.file, "testing");
+    const url = `${HOST}/category/${req.file.filename}`;
     res.send({ url });
 }
 
@@ -29,43 +37,18 @@ function bulkUpload(req, res) {
 }
 
 
-/** Insert image link in sql db */
+function bulkUploadCategory(req, res) {
 
-function createImgGallery(req, res){
-    let url = req.body.url;
-    let query = "insert into gallery (url) values (?)";
+    let files = req.files;
+    let url = [];
+    for (let file of files) {
+        let name = file.filename
+        url.push(`${HOST}/category/${name}`);
+        console.log(url);
+    };
 
-    db.query(query,[url], (err,result)=>{
-        if(!err){
-            res.status(200).json({ msg: "Success"});
-        }else{
-            res.status(500).json({ msg: err });
-        }
-    })
+    res.status(200).json({ msg: "success", url });
 }
-
-
-/** Get all image link from db */
-
-function getAllImg(req, res){
-    let query = "select url from gallery";
-
-    db.query(query, (err,result)=>{
-        if(!err){
-            if(result.length >0){
-            //    console.log( result);
-              let img =  getArray(result);
-              res.status(500).json(img);
-            }else{
-                res.status(500).json({ msg: "something went wrong"});
-            }
-        }else{
-            res.status(500).json({ msg: "something went wrong"});
-        }
-    })
-}
-
-
 
 
 
@@ -80,6 +63,35 @@ function getFiles (req, res){
 
                 files.forEach(file=>{
                   const url = `${HOST}/uploads/${file}`
+                    arr.push(url);
+                })
+
+                return res.status(200).json(arr);
+            }else{
+               return res.status(400).json({ msg: "Folder is empty"});
+            }
+        }else{
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        }
+    })
+}
+
+
+
+
+
+/** Get all the file  */
+
+
+function getAllCategoryImg (req, res){
+    fs.readdir(directoryPathCategory, (err, files)=>{
+        if(!err){
+            console.log(files,"all")
+            if(files.length>0){
+                let arr = []
+
+                files.forEach(file=>{
+                  const url = `${HOST}/category/${file}`
                     arr.push(url);
                 })
 
@@ -110,5 +122,17 @@ function getFiles (req, res){
  }
 
 
+ function deleteCategoryFile(req, res){
+    const {name} = req.params;
+    fs.unlink(directoryPathCategory+"/"+name, (err)=>{
+        if(!err){
+            return res.status(200).json({ msg: "file deleted sucessfullly"}); 
+        }else{
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        }
+    })
+ }
 
-module.exports = { singleUpload, bulkUpload, createImgGallery, getAllImg, getFiles, deleteFile };
+
+
+module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile };
