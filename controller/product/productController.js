@@ -54,10 +54,16 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 
 exports.getProduct = catchAsyncError(async (req, res, next) => {
     var page = parseInt(req.query.page, 10) || 0;
-    var numPerPage = 2;
-var skip = (page-1) * numPerPage;
-var limit = skip + ',' + numPerPage;
-    let query = 'select * from products LIMIT ' + limit;
+    var numPerPage = 1;
+    var skip = (page - 1) * numPerPage;
+    var limit = skip + ',' + numPerPage;
+    let query;
+    if(skip >=0){
+
+     query = 'select * from products LIMIT ' + limit;
+    }else{
+        query = 'select * from products'
+    }
 
     db.query(query, (err, result) => {
 
@@ -79,22 +85,31 @@ var limit = skip + ',' + numPerPage;
 
 exports.getByCategoryId = catchAsyncError((req, res, next) => {
     const id = req.params.id
-    let query = "select * from products where categoryId=?";
+    var page = parseInt(req.query.page, 10) || 0;
+    var numPerPage = 1;
+    var skip = (page - 1) * numPerPage;
+    var limit = skip + ',' + numPerPage;
 
-    db.query(query, [id], async (err, result) => {
+    let query;
+    console.log(skip, limit,"cloj");
+    if(skip >=0){
+        query = `select * from products where categoryId=? LIMIT  ${limit}`;
+       }else{
+        query = `select * from products where categoryId=? `;
+       }
+
+    db.query(query, [id], async (err, results) => {
         if (!err) {
-            let getAll = getProductArr(result);
+            let getAll = getProductArr(results);
 
-            const id = (result[0].categoryId);
-            let getID = await axios.get(`http://localhost:5000/category/get/${id}`);
+            let newO=[];
+            for(const result of getAll){
+                const id = (result.categoryId);
+                let getID = await axios.get(`http://localhost:5000/category/get/${id}`);
+                
 
-            delete result[0].categoryName;
-            delete result[0].subCategoryName;
-
-
-            let newO = Object.assign(result[0], { category: getID.data[0] })
-            console.log(newO, "atlist lsyo");
-
+                 newO.push(Object.assign(result, { categoryFeatureImg: getID.data[0].featureImg, categoryGallay: getID.data[0].galleryImg }))
+            } 
             return res.status(200).json(newO)
         } else {
             return res.status(500).json(err);
@@ -129,15 +144,15 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
     const { title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg, categoryId, categoryName, subCategoryName } = req.body;
     query = "update products set ? where id=?";
 
-    db.query(query,[req.body, id], (err, result)=>{
-        if(!err){
-            if(!result.affectedRows === 0){
-                return res.status(400).json({msg:"Your product id is incorrect"});
+    db.query(query, [req.body, id], (err, result) => {
+        if (!err) {
+            if (!result.affectedRows === 0) {
+                return res.status(400).json({ msg: "Your product id is incorrect" });
             }
 
-            return res.status(200).json({msg:"Your code updated sucessfully"});
-        }else{
-            if(err.errno === 1064){
+            return res.status(200).json({ msg: "Your code updated sucessfully" });
+        } else {
+            if (err.errno === 1064) {
 
                 return res.status(500).json("err:YOur req.body is empty");
             }
