@@ -22,9 +22,15 @@ function singleUploadCategory(req, res) {
 }
 
 
+function headerBackground(req, res) {
+    
+    const url = `${HOST}/background/${req.file.filename}`;
+    res.send({ url });
+}
+
+
 
 function bulkUpload(req, res) {
-
     let files = req.files;
     let url = [];
     for (let file of files) {
@@ -135,4 +141,4 @@ function getAllCategoryImg (req, res){
 
 
 
-module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile };
+module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile, headerBackground };

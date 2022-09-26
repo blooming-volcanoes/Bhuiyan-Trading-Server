@@ -141,7 +141,7 @@ exports.getBySubCategory = catchAsyncError(async (req, res, next) => {
 
 exports.updateProduct = catchAsyncError(async (req, res, next) => {
     const id = req.params.id;
-    const { title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg, categoryId, categoryName, subCategoryName } = req.body;
+
     query = "update products set ? where id=?";
 
     db.query(query, [req.body, id], (err, result) => {
@@ -150,7 +150,7 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
                 return res.status(400).json({ msg: "Your product id is incorrect" });
             }
 
-            return res.status(200).json({ msg: "Your code updated sucessfully" });
+            return res.status(200).json({ msg: "Your given input has updated sucessfully" });
         } else {
             if (err.errno === 1064) {
 
