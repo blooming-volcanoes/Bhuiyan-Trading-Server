@@ -154,7 +154,7 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
         } else {
             if (err.errno === 1064) {
 
-                return res.status(500).json("err:YOur req.body is empty");
+                return res.status(500).json("err:Your input is empty");
             }
             return res.status(500).json(err);
         }

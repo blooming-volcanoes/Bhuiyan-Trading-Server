@@ -69,6 +69,4 @@ exports.getCategoryByID = (req, res, next) => {
         }
     })
 
-
-
 }
