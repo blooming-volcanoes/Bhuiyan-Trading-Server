@@ -91,7 +91,6 @@ exports.getByCategoryId = catchAsyncError((req, res, next) => {
     var limit = skip + ',' + numPerPage;
 
     let query;
-    console.log(skip, limit,"cloj");
     if(skip >=0){
         query = `select * from products where categoryId=? LIMIT  ${limit}`;
        }else{
@@ -122,8 +121,18 @@ exports.getByCategoryId = catchAsyncError((req, res, next) => {
 
 exports.getBySubCategory = catchAsyncError(async (req, res, next) => {
     const { name } = req.params;
-    let get = '%name%';
-    let query = `select * from products where subCategoryName like '%${name}%'`;
+
+    var page = parseInt(req.query.page) || 0;
+    var numPerPage = 1;
+    var skip = (page - 1) * numPerPage;
+    var limit = skip + ',' + numPerPage;
+
+    let query;
+    if(skip >=0){
+        query = `select * from products where subCategoryName like '%${name}%' LIMIT  ${limit}`;
+       }else{
+        query = `select * from products where subCategoryName like '%${name}%'`;
+       }
 
     db.query(query, (err, result) => {
         if (!err) {
