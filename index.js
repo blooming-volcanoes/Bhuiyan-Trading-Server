@@ -23,6 +23,7 @@ const categoryRoutes = require('./routes/productRoutes/categoryRoute');
 const productRoute = require('./routes/productRoutes/productRoute');
 const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
 const postRoute = require('./routes/postRoutes/postRoute');
+const headerRoute = require('./routes/headerRoutes/headerRoutes');
 
 const log4js = require('log4js');
 const path = require('path');
@@ -53,6 +54,7 @@ app.use('/product', productRoute);
 app.use('/post', postCategoryRoute);
 app.use('/blog', postRoute);
 app.use('/gallery', galleryRouter);
+app.use('/header', headerRoute);
 
 // Socket
 const http = require('http').createServer(app);
