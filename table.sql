@@ -30,6 +30,16 @@ create table postCategory(
 )
 
 
+create table Header (
+    id int Not null AUTO_INCREMENT,
+    mainTitle text not null,
+    secondTitle text,
+    thirdTitle text,
+    backgroundImg text not null,
+    primary key(id)
+)
+
+
 create table products(
      id int NOT NULL AUTO_INCREMENT,
     title varchar(255) NOT NULL,
