@@ -1,6 +1,6 @@
 const db = require('../../db/connection');
 
-function DynamicHeader (){
+function DynamicHeader (req,res){
     let {mainTitle,secondTitle,thirdTitle,backgroundImg}  = req.body;
     let query = "insert into header (mainTitle,secondTitle,thirdTitle,backgroundImg) values (?,?,?,?)";
 
@@ -13,9 +13,24 @@ function DynamicHeader (){
     })
 }
 
-function updateHeader (){
-    const id = req.params.id;
 
+function getHeader(req, res){
+    let query = "select * from header";
+    db.query(query, (err, result)=>{
+        if(!err){
+            return res.status(200).json(result[0]);
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+}
+
+
+function updateHeader (req, res){
+    const id = req.params.id;
+    if(!id){
+        return res.status(400).json({ msg: "provide id to update" });
+    }
     query = "update header set ? where id=?";
 
     db.query(query, [req.body, id], (err, result) => {
@@ -37,5 +52,6 @@ function updateHeader (){
 
 module.exports = {
     DynamicHeader, 
-    updateHeader
+    updateHeader,
+    getHeader
 }

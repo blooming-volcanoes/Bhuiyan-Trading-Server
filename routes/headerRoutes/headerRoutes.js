@@ -1,9 +1,10 @@
-const { DynamicHeader, updateHeader } = require('./headerController');
+const { DynamicHeader, updateHeader, getHeader } = require('./headerController');
 
 const router = require('express').Router();
 
 
-router.route('/').post(DynamicHeader).put(updateHeader);
+router.route('/').post(DynamicHeader).get(getHeader);
+router.route("/:id").put(updateHeader);
 
 
 
