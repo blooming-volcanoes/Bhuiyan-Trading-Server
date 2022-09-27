@@ -78,3 +78,19 @@ create table gallery (
      url text not null,
      primary key(id)
 )
+
+
+
+create table contacts (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    emailTitle VARCHAR(255),
+    comments VARCHAR(255) NOT NULL,
+    productName VARCHAR(255) NOT NULL,
+    country VARCHAR(255),
+    city VARCHAR(255),
+    zipCode VARCHAR(255),
+
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
