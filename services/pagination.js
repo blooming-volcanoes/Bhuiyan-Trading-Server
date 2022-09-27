@@ -3,7 +3,7 @@ function pagination(page, numPerPage ){
     var skip = (page - 1) * numPerPage;
     var limit = skip + ',' + numPerPage;
 
-    return [limit, skip]
+    return {limit:limit, skip:skip}
 }
 
 

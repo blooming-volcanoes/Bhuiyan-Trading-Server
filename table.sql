@@ -91,6 +91,6 @@ create table contacts (
     country VARCHAR(255),
     city VARCHAR(255),
     zipCode VARCHAR(255),
-
+    productId varchar(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )

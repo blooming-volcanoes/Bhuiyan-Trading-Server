@@ -24,7 +24,7 @@ const productRoute = require('./routes/productRoutes/productRoute');
 const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
 const postRoute = require('./routes/postRoutes/postRoute');
 const headerRoute = require('./routes/headerRoutes/headerRoutes');
-const contactRoute = require('./routes/ContactRoutes/contactRoutes');
+const contactRoute = require('./routes/contactRoutes/contactRoutes');
 
 const log4js = require('log4js');
 const path = require('path');
