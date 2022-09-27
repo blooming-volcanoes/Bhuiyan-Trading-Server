@@ -83,6 +83,26 @@ exports.updateCategory = catchAsyncError(async (req, res, next) => {
 
 
 })
+exports.deleteCategory = catchAsyncError(async (req, res, next) => {
+    const id = req.params.id;
+
+    query = "delete from productcategory where id=?";
+
+    db.query(query, [id], (err, result) => {
+        if (!err) {
+            if (!result.affectedRows === 0) {
+                return res.status(400).json({ msg: "Your Category id is incorrect" });
+            }
+
+            return res.status(200).json({ msg: "Your category has been deleted" });
+        } else {
+
+            return res.status(500).json(err);
+        }
+    })
+
+
+})
 
 
 
