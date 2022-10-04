@@ -41,7 +41,7 @@ function bulkUpload(req, res) {
     let files = req.files;
     let url = [];
     for (let file of files) {
-        let name = file.filename
+        let name = file.filename;
         url.push(`${HOST}/uploads/${name}`);
         console.log(url);
     };
@@ -59,6 +59,21 @@ function bulkUploadCategory(req, res) {
         let name = file.filename
         url.push(`${HOST}/category/${name}`);
         console.log(url);
+    };
+
+    res.status(200).json({ msg: "success", url });
+}
+
+
+
+//Bulk image upload image for sub-category
+function bulkUploadBlog(req, res) {
+
+    let files = req.files;
+    let url = [];
+    for (let file of files) {
+        let name = file.filename
+        url.push(`${HOST}/blog/${name}`);
     };
 
     res.status(200).json({ msg: "success", url });
@@ -151,4 +166,4 @@ function deleteCategoryFile(req, res) {
 
 
 
-module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile, headerBackground, singleUploadBlog };
+module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile, headerBackground, singleUploadBlog,bulkUploadBlog };
