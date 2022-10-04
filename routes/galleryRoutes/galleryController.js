@@ -6,29 +6,37 @@ const fs = require('fs');
 const directoryPath = path.join(__dirname, "..", "..", "storage", "uploads");
 const directoryPathCategory = path.join(__dirname, "..", "..", "storage", "category");
 
-const HOST = "https://api.bhuiyantrad.com"
+const HOST = "http://localhost:5000.com"
 
+
+// single upload image for product
 function singleUpload(req, res) {
-    console.log(req.file, "testing");
     const url = `${HOST}/uploads/${req.file.filename}`;
     res.send({ url });
 }
 
 
+// Single uplad image for category
 function singleUploadCategory(req, res) {
-    console.log(req.file, "testing");
     const url = `${HOST}/category/${req.file.filename}`;
     res.send({ url });
 }
 
 
+// single upload image for blog
+function singleUploadBlog(req, res) {
+    const url = `${HOST}/blog/${req.file.filename}`;
+    res.send({ url });
+}
+
+// Upload home page background image
 function headerBackground(req, res) {
     const url = `${HOST}/background/${req.file.filename}`;
     res.send({ url });
 }
 
 
-
+//Bulk image upload for product
 function bulkUpload(req, res) {
     let files = req.files;
     let url = [];
@@ -42,6 +50,7 @@ function bulkUpload(req, res) {
 }
 
 
+//Bulk image upload image for sub-category
 function bulkUploadCategory(req, res) {
 
     let files = req.files;
@@ -57,8 +66,7 @@ function bulkUploadCategory(req, res) {
 
 
 
-/** Get all the file  */
-
+/** Get all Product image file  */
 function getFiles(req, res) {
     fs.readdir(directoryPath, (err, files) => {
         if (!err) {
@@ -85,7 +93,7 @@ function getFiles(req, res) {
 
 
 
-/** Get all the file  */
+/** Get all the Categroy & sub-category Image file  */
 function getAllCategoryImg(req, res) {
     fs.readdir(directoryPathCategory, (err, files) => {
         if (!err) {
@@ -107,6 +115,12 @@ function getAllCategoryImg(req, res) {
         }
     })
 }
+
+
+
+
+
+
 
 
 
@@ -137,4 +151,4 @@ function deleteCategoryFile(req, res) {
 
 
 
-module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile, headerBackground };
+module.exports = { singleUpload, singleUploadCategory, bulkUploadCategory, bulkUpload, getFiles, getAllCategoryImg, deleteFile, deleteCategoryFile, headerBackground, singleUploadBlog };
