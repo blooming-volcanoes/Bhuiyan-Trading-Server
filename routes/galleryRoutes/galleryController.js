@@ -1,10 +1,10 @@
 const path = require('path');
 const db = require('../../db/connection');
-const {getArray} = require('../../services/getArr');
+const { getArray } = require('../../services/getArr');
 const fs = require('fs');
 
-const directoryPath = path.join(__dirname, "..","..", "storage", "uploads");
-const directoryPathCategory = path.join(__dirname, "..","..", "storage", "category");
+const directoryPath = path.join(__dirname, "..", "..", "storage", "uploads");
+const directoryPathCategory = path.join(__dirname, "..", "..", "storage", "category");
 
 const HOST = "https://api.bhuiyantrad.com"
 
@@ -23,7 +23,6 @@ function singleUploadCategory(req, res) {
 
 
 function headerBackground(req, res) {
-    
     const url = `${HOST}/background/${req.file.filename}`;
     res.send({ url });
 }
@@ -60,24 +59,24 @@ function bulkUploadCategory(req, res) {
 
 /** Get all the file  */
 
-function getFiles (req, res){
-    fs.readdir(directoryPath, (err, files)=>{
-        if(!err){
-            console.log(files,"all")
-            if(files.length>0){
+function getFiles(req, res) {
+    fs.readdir(directoryPath, (err, files) => {
+        if (!err) {
+            console.log(files, "all")
+            if (files.length > 0) {
                 let arr = []
 
-                files.forEach(file=>{
-                  const url = `${HOST}/uploads/${file}`
+                files.forEach(file => {
+                    const url = `${HOST}/uploads/${file}`
                     arr.push(url);
                 })
 
                 return res.status(200).json(arr);
-            }else{
-               return res.status(400).json({ msg: "Folder is empty"});
+            } else {
+                return res.status(400).json({ msg: "Folder is empty" });
             }
-        }else{
-            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        } else {
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err });
         }
     })
 }
@@ -87,57 +86,54 @@ function getFiles (req, res){
 
 
 /** Get all the file  */
-
-
-function getAllCategoryImg (req, res){
-    fs.readdir(directoryPathCategory, (err, files)=>{
-        if(!err){
-            console.log(files,"all")
-            if(files.length>0){
+function getAllCategoryImg(req, res) {
+    fs.readdir(directoryPathCategory, (err, files) => {
+        if (!err) {
+            console.log(files, "all")
+            if (files.length > 0) {
                 let arr = []
 
-                files.forEach(file=>{
-                  const url = `${HOST}/category/${file}`
+                files.forEach(file => {
+                    const url = `${HOST}/category/${file}`
                     arr.push(url);
                 })
 
                 return res.status(200).json(arr);
-            }else{
-               return res.status(400).json({ msg: "Folder is empty"});
+            } else {
+                return res.status(400).json({ msg: "Folder is empty" });
             }
-        }else{
-            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+        } else {
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err });
         }
     })
 }
 
 
 
- /** delete file from folder */
+/** delete file from folder */
 
-
- function deleteFile(req, res){
-    const {name} = req.params;
-    fs.unlink(directoryPath+"/"+name, (err)=>{
-        if(!err){
-            return res.status(200).json({ msg: "file deleted sucessfullly"}); 
-        }else{
-            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+function deleteFile(req, res) {
+    const { name } = req.params;
+    fs.unlink(directoryPath + "/" + name, (err) => {
+        if (!err) {
+            return res.status(200).json({ msg: "file deleted sucessfullly" });
+        } else {
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err });
         }
     })
- }
+}
 
 
- function deleteCategoryFile(req, res){
-    const {name} = req.params;
-    fs.unlink(directoryPathCategory+"/"+name, (err)=>{
-        if(!err){
-            return res.status(200).json({ msg: "file deleted sucessfullly"}); 
-        }else{
-            return res.status(500).json({ msg: 'Unable to scan directory: ' + err}); 
+function deleteCategoryFile(req, res) {
+    const { name } = req.params;
+    fs.unlink(directoryPathCategory + "/" + name, (err) => {
+        if (!err) {
+            return res.status(200).json({ msg: "file deleted sucessfullly" });
+        } else {
+            return res.status(500).json({ msg: 'Unable to scan directory: ' + err });
         }
     })
- }
+}
 
 
 
