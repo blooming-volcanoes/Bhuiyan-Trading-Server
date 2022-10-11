@@ -64,11 +64,15 @@ create table posts(
     slug varchar(255),
     postDesc mediumtext,
     featureImg varchar(255),
-    imgCaption varchar(255),
-    focusKey varchar(255)
-    metaDesc varchar(255)
+    imgCaption text,
+    focusKey varchar(255),
+    metaDesc varchar(255),
+    alt varchar(255),
+    status varchar(100),
     created_at timestamp default current_timestamp,
-    updated_at datetime default current_timestamp on update current_timestamp
+    updated_at datetime default current_timestamp on update current_timestamp,
+
+    primary key(id)
 
 )
 

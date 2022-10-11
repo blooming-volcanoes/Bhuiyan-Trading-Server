@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const connection = require('./db/connection');
-
+const nodeCron = require('node-cron');
 const app = require('express')();
 
 const port = process.env.PORT || 5000;
@@ -67,10 +67,7 @@ app.get('/', (req, res) => {
   
 });
 
-app.get('/log', (req, res) => {
-    console.log(__dirname + '/logs.log');
-    res.sendFile(path.join(__dirname + '/logs.log'));
-});
+
 
 
 
