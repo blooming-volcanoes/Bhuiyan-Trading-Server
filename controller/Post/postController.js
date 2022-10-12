@@ -21,7 +21,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
     db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesco, alt, status, slug], (err, result) => {
         if (!err) {
             logger.debug(result,"from create post");
-            return res.status(200).json({ msg: "Product Added successfully" })
+            return res.status(200).json({ msg: "Post created Successfully" })
         } else {
             return res.status(500).json(err)
         }
