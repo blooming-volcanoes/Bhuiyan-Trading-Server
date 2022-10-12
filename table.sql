@@ -71,9 +71,7 @@ create table posts(
     status varchar(100),
     created_at timestamp default current_timestamp,
     updated_at datetime default current_timestamp on update current_timestamp,
-
-    primary key(id)
-
+primary key(id)
 )
 
 

@@ -1,9 +1,9 @@
-const { createPostCategory, getPostCategory } = require("../../controller/Post/postCategoryController");
+// const { createPostCategory, getPostCategory } = require("../../controller/Post/postCategoryController");
 
-const router = require("express").Router();
-
-
-router.route('/category').post(createPostCategory).get(getPostCategory)
+// const router = require("express").Router();
 
 
-module.exports = router;
+// router.route('/category').post(createPostCategory).get(getPostCategory)
+
+
+// module.exports = router;

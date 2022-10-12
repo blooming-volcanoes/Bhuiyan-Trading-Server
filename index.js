@@ -52,8 +52,7 @@ app.use((req, res, next)=>{
 app.use('/user', userRoutes);
 app.use('/category', categoryRoutes);
 app.use('/product', productRoute);
-app.use('/post', postCategoryRoute);
-app.use('/blog', postRoute);
+app.use('/post', postRoute);
 app.use('/gallery', galleryRouter);
 app.use('/header', headerRoute);
 app.use('/contact', contactRoute);

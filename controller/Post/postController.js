@@ -11,13 +11,14 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
     let slug;
      // convert to lower case
      slug = title.toLowerCase();
-
+     // replace spaces with dash symbols
      slug = slug.replace(/\`|\~|\!|\@|\#|\||\$|\%|\^|\&|\*|\(|\)|\+|\=|\,|\.|\/|\?|\>|\<|\'|\"|\:|\;|_/gi, '');
      slug = slug.replace(/ /gi, "-");
-    let query = "insert into posts (title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, slug) values (?,?,?,?,?,?,?,?)"
-     // replace spaces with dash symbols
 
-    db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, slug], (err, result) => {
+    let query = "insert into posts (title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc,alt, status, slug) values (?,?,?,?,?,?,?,?,?,?)"
+
+
+    db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesco, alt, status, slug], (err, result) => {
         if (!err) {
             logger.debug(result,"from create post");
             return res.status(200).json({ msg: "Product Added successfully" })

@@ -1,2 +1,26 @@
 [2022-10-11T10:11:35.823] [DEBUG] default - null err
 [2022-10-11T10:11:35.835] [DEBUG] default - Db connection successful
+[2022-10-12T09:36:25.363] [DEBUG] default - null err
+[2022-10-12T09:36:25.371] [DEBUG] default - Db connection successful
+[2022-10-12T09:36:30.827] [DEBUG] default - null err
+[2022-10-12T09:36:30.835] [DEBUG] default - Db connection successful
+[2022-10-12T09:57:50.740] [DEBUG] default - null err
+[2022-10-12T09:57:50.748] [DEBUG] default - Db connection successful
+[2022-10-12T09:57:58.489] [DEBUG] default - null err
+[2022-10-12T09:57:58.491] [DEBUG] default - Db connection successful
+[2022-10-12T10:01:50.451] [DEBUG] default - null err
+[2022-10-12T10:01:50.459] [DEBUG] default - Db connection successful
+[2022-10-12T10:01:53.918] [DEBUG] default - null err
+[2022-10-12T10:01:53.922] [DEBUG] default - Db connection successful
+[2022-10-12T10:08:29.830] [DEBUG] default - ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 1,
+  info: '',
+  serverStatus: 2,
+  warningStatus: 0
+} from create post
+[2022-10-12T10:14:28.377] [DEBUG] default - null err
+[2022-10-12T10:14:28.380] [DEBUG] default - Db connection successful
+[2022-10-12T10:14:32.862] [DEBUG] default - null err
+[2022-10-12T10:14:32.864] [DEBUG] default - Db connection successful
