@@ -21,7 +21,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
          * October - change into month you want publish
          * Wednesday - change into the day you want to publish
          */
-       
+       res.json("Post schduled")
         const job = nodeCron.schedule(status, async()=>{
             
             await schedulePost(req,res)
@@ -55,6 +55,9 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
 
 
+
+
+
 //Sechudel post time
  async function schedulePost(req, res){
     console.log("here", req.body);
@@ -71,7 +74,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
     db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, alt, status, slug], (err, result) => {
         if (!err) {
-            return res.status(200).json({ msg: "Post created Successfully" })
+            // return res.status(200).json({ msg: "Post created Successfully" })
         } else {
             return res.status(500).json(err)
         }
