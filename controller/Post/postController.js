@@ -21,6 +21,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
          * October - change into month you want publish
          * Wednesday - change into the day you want to publish
          */
+       
         const job = nodeCron.schedule(status, async()=>{
             
             await schedulePost(req,res)
