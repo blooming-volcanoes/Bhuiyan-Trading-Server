@@ -4,7 +4,7 @@ const EventEmitter = require('events');
 const event = new EventEmitter();
 
 const sendToken = require('../../lib/jwt.js');
-const db = require('../../db/connection')
+const db = require('../../db/connection');
 
 exports.createPost =  catchAsyncError(async (req, res, next) => {
     const {title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, alt, status, } = req.body;
@@ -40,21 +40,58 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
 
 
- exports.getPost =  catchAsyncError(async (req, res, next) => { 
-    let query = "select p.title, p.postDesc, p.featureImg, p.imgCaption, p.focusKey, p.metaDesc, p.slug, pc.id as categoryId, pc.categoryName as categoryName from posts as p inner join postCategory as pc where p.categoryId = pc.id";
+ exports.getPost = catchAsyncError(async (req, res, next) => {
+    var page = parseInt(req.query.page, 10) || 0;
+    var numPerPage = 10;
+    var skip = (page - 1) * numPerPage;
+    var limit = skip + ',' + numPerPage;
+    let query;
+    if(skip >=0){
+
+     query = 'select * from posts LIMIT ' + limit;
+    }else{
+        query = 'select * from posts'
+    }
 
     db.query(query, (err, result) => {
+
         if (!err) {
+            // console.log(result);
+            // let getAll = getProductArr(result);
+            // let newO = Object.assign(result[0], {gallaryImg:result[0].gallaryImg.split(";")} )
             return res.status(200).json(result)
         } else {
             return res.status(500).json(err);
         }
     })
- })
+})
 
 
 
 
+ exports.updatePost = catchAsyncError(async (req, res, next) => {
+    const id = req.params.id;
+
+    query = "update posts set ? where id=?";
+
+    db.query(query, [req.body, id], (err, result) => {
+        if (!err) {
+            if (!result.affectedRows === 0) {
+                return res.status(400).json({ msg: "Your posts id is incorrect" });
+            }
+
+            return res.status(200).json({ msg: "Your given input has updated sucessfully" });
+        } else {
+            if (err.errno === 1064) {
+
+                return res.status(500).json("err:Your input is empty");
+            }
+            return res.status(500).json(err);
+        }
+    })
+
+
+})
 
 
 
@@ -75,6 +112,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
     db.query(query, [title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, alt, status, slug], (err, result) => {
         if (!err) {
             // return res.status(200).json({ msg: "Post created Successfully" })
+            res.json("posted")
         } else {
             return res.status(500).json(err)
         }
