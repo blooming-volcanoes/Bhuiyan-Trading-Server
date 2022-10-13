@@ -7,12 +7,20 @@ const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 exports.createPost =  catchAsyncError(async (req, res, next) => {
-    const { status, } = req.body;
+    const {title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, alt, status, } = req.body;
 
     if(status == 'now'){
         await schedulePost(req,res)
     }else {
-
+        
+        // "0 1 19 12 October Wednesday"
+        /**
+         * 0- means seconds
+         * 1- means minitues
+         * 19 - hour(24h)
+         * October - change into month you want publish
+         * Wednesday - change into the day you want to publish
+         */
         const job = nodeCron.schedule(status, async()=>{
             
             await schedulePost(req,res)
