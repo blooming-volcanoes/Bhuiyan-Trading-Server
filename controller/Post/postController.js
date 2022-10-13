@@ -7,31 +7,26 @@ const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
 exports.createPost =  catchAsyncError(async (req, res, next) => {
-    const {title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc, alt, status, } = req.body;
-    const date = new Date(0, 47,18, 12, 10, 3);
+    const { status, } = req.body;
 
-    console.log(date,"ch");
     if(status == 'now'){
-        console.log("posting now");
+        await schedulePost(req,res)
     }else {
-        const job = nodeCron.schedule("0 1 19 12 October Wednesday", async()=>{
+
+        const job = nodeCron.schedule(status, async()=>{
             
             await schedulePost(req,res)
             event.emit('JOB COMPLETED');
         });
         
-
+ // Listen to when a 'JOB COMPLETED' event is emitted and stop the task
         event.on('JOB COMPLETED', () => {
             console.log('Job done!');
             job.stop();
         });
     }
-
-  
  })
 
-
- // Listen to when a 'JOB COMPLETED' event is emitted and stop the task
 
 
 

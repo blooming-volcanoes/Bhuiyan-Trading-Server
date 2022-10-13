@@ -11,13 +11,23 @@ const logger = log4js.getLogger();
 //     password: "LVmd44OGibG6oYoGr6Ad",
 //     database: "railway"
 // })
+// let connection = mysql.createPool({
+//     port: 3306,
+//     host: 'localhost',
+//     user: 'root',
+//     password: 'password',
+//     database: 'buiyandb',
+// });
+
+
 let connection = mysql.createPool({
-    port: 3306,
-    host: 'localhost',
-    user: 'root',
-    password: 'password',
-    database: 'buiyandb',
-});
+    port:3306,
+    host:"localhost",
+    user: "bhuiyantrad_user",
+    password: "@xWgFOUfX4r9",
+    database: "bhuiyantrad_test"
+})
+
 
 connection.getConnection((err, result) => {
     logger.debug(err, 'err');
