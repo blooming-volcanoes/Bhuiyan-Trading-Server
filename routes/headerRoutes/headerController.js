@@ -1,10 +1,10 @@
 const db = require('../../db/connection');
 
 function DynamicHeader (req,res){
-    let {mainTitle,secondTitle,thirdTitle,backgroundImg}  = req.body;
-    let query = "insert into header (mainTitle,secondTitle,thirdTitle,backgroundImg) values (?,?,?,?)";
+    let {mainTitle,secondTitle,thirdTitle,backgroundImg, logo}  = req.body;
+    let query = "insert into header (mainTitle,secondTitle,thirdTitle,backgroundImg,logo) values (?,?,?,?,?)";
 
-    db.query(query,[mainTitle,secondTitle,thirdTitle,backgroundImg], (err, result)=>{
+    db.query(query,[mainTitle,secondTitle,thirdTitle,backgroundImg,logo], (err, result)=>{
         if(!err && result.affectedRows >0){
             return res.status(200).json({msg: "Input has successfully stored into DB"})
         }else{

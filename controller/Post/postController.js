@@ -98,8 +98,38 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
 
 exports.getPostBySlug = catchAsyncError(async (req, res, next) => {
-    // const slug = 
+    const slug = req.params.slug;
+
+   let query = 'select * from posts where slug=?';
+    db.query(query,[slug], (err, result) => {
+
+        if (!err) {
+            return res.status(200).json(result[0])
+        } else {
+            return res.status(500).json(err);
+        }
+    })
+
 })
+
+
+exports.deletePost = catchAsyncError(async (req, res, next) => {
+    const slug = req.params.slug;
+
+    let query = 'delete from posts where slug=?';
+     db.query(query,[slug], (err, result) => {
+ 
+         if (!err) {
+            if (result.affectedRows === 0) {
+                return res.status(404).json({ msg: "Post slug doesn't found" });
+            }
+
+            return res.status(200).json({ msg: "your post has been successfully deleted" });
+         } else {
+             return res.status(500).json(err);
+         }
+     })
+ })
 
 
 
