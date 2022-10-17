@@ -95,6 +95,14 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 
 
 
+
+
+exports.getPostBySlug = catchAsyncError(async (req, res, next) => {
+    // const slug = 
+})
+
+
+
 //Sechudel post time
  async function schedulePost(req, res){
     console.log("here", req.body);
@@ -105,6 +113,21 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
      // replace spaces with dash symbols
      slug = slug.replace(/\`|\~|\!|\@|\#|\||\$|\%|\^|\&|\*|\(|\)|\+|\=|\,|\.|\/|\?|\>|\<|\'|\"|\:|\;|_/gi, '');
      slug = slug.replace(/ /gi, "-");
+
+    //Create a unique characters to make slug unique
+    function makeId(length){
+        let result = "";
+        let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for(let i=0; i<length; i++){
+            result += characters.charAt(Math.floor(Math.random()*charactersLength));
+        }
+
+        return result;
+    }
+
+    slug = slug + "-"+makeId(5)
+
 
     let query = "insert into posts (title, categoryId, postDesc, featureImg, imgCaption, focusKey, metaDesc,alt, status, slug) values (?,?,?,?,?,?,?,?,?,?)"
 
