@@ -94,7 +94,7 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 })
 
 
-/** Search Product by title */
+/** Search post by title */
 exports.searchPost = catchAsyncError(async (req, res, next) => {
 
     let {title} = req.body;

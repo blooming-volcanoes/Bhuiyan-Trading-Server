@@ -86,13 +86,13 @@ exports.searchProduct = catchAsyncError(async (req, res, next) => {
 
 
     var page = parseInt(req.query.page, 10) || 0;
-    var numPerPage = 1;
+    var numPerPage = 10;
     var skip = (page - 1) * numPerPage;
     var limit = skip + ',' + numPerPage;
     let query;
     if(skip >=0){
 
-     query = "select * from products where title like ?" + limit;
+     query = "select * from products where title like ? LIMIT " + limit;
     }else{
         query ="select * from products where title like ?"
     }
