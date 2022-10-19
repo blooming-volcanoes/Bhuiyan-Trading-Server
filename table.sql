@@ -35,6 +35,7 @@ create table Header (
     mainTitle text not null,
     secondTitle text,
     thirdTitle text,
+    logo varchar(255),
     backgroundImg text not null,
     primary key(id)
 )

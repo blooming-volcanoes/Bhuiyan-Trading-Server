@@ -94,6 +94,39 @@ exports.createPost =  catchAsyncError(async (req, res, next) => {
 })
 
 
+/** Search Product by title */
+exports.searchPost = catchAsyncError(async (req, res, next) => {
+
+    let {title} = req.body;
+
+
+    var page = parseInt(req.query.page, 10) || 0;
+    var numPerPage = 10;
+    var skip = (page - 1) * numPerPage;
+    var limit = skip + ',' + numPerPage;
+    let query;
+    if(skip >=0){
+
+     query = 'select * from posts where title like ? LIMIT ' + limit;
+    }else{
+        query ="select * from posts where title like ?"
+    }
+
+    db.query(query,[title], (err, result)=>{
+        if(!err){
+            if(result.length>0){
+                return res.status(200).json(result)
+            }else{
+                return res.status(200).json({msg: "Sorry no result found"})
+            }
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+
+})
+
+
 
 
 
