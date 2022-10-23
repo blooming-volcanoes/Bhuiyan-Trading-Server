@@ -67,8 +67,33 @@ function deleteContact(req,res){
 }
 
 
+
+
+
+function searchContact(req, res){
+    let {title} = req.body;
+    let query = `SELECT * FROM contacts WHERE CONCAT(userName, '', productName, '', email) LIKE ?`
+
+     db.query(query,[title], (err, result)=>{
+        if(!err){
+            console.log(result);
+            if(result.length === 0){
+                res.status(200).json({ msg: "Search result is not found" });
+            }else{
+                res.status(200).json(result);
+            }
+        }else{
+            res.status(500).json(err);
+        }
+     })
+
+
+}
+
+
 module.exports = {
     postContact,
     getContacDetails,
-    deleteContact   
+    deleteContact,
+    searchContact   
 }

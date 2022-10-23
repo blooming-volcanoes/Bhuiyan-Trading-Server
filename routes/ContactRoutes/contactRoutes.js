@@ -1,11 +1,12 @@
-const { postContact, getContacDetails, deleteContact } = require('./contactController');
+const { postContact, getContacDetails, deleteContact, searchContact } = require('./contactController');
 
 const router = require('express').Router();
 
 
 
-router.route('/').post(postContact).get(getContacDetails)
+router.route('/').post(postContact).get(getContacDetails);
 router.route('/:id').delete(deleteContact);
+router.route('/search').post(searchContact);
 
 
 
