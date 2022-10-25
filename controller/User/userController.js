@@ -201,8 +201,8 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
 })
 
 
-exports.changePassword = catchAsyncError(async (req, res, next) => { 
-    
+exports.updateUser = catchAsyncError(async (req, res, next) => { 
+    // 
 })
 
 

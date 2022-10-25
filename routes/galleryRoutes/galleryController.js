@@ -83,9 +83,15 @@ function bulkUploadBlog(req, res) {
 
 /** Get all Product image file  */
 function getFiles(req, res) {
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
+      
+    console.log(page,"page", limit,);
+    // calculating the starting and ending index
+
+
     fs.readdir(directoryPath, (err, files) => {
         if (!err) {
-            console.log(files, "all")
             if (files.length > 0) {
                 let arr = []
 
@@ -94,7 +100,10 @@ function getFiles(req, res) {
                     arr.push(url);
                 })
 
-                return res.status(200).json(arr);
+
+             let results =  paginatedResults(page, limit,arr)
+
+                return res.status(200).json(results)
             } else {
                 return res.status(400).json({ msg: "Folder is empty" });
             }
@@ -110,9 +119,12 @@ function getFiles(req, res) {
 
 /** Get all the Categroy & sub-category Image file  */
 function getAllCategoryImg(req, res) {
+    console.log(req.params);
+    const page = parseInt(req.query.page);
+    const limit = parseInt(req.query.limit);
+      
     fs.readdir(directoryPathCategory, (err, files) => {
         if (!err) {
-            console.log(files, "all")
             if (files.length > 0) {
                 let arr = []
 
@@ -120,8 +132,10 @@ function getAllCategoryImg(req, res) {
                     const url = `${HOST}/category/${file}`
                     arr.push(url);
                 })
-
-                return res.status(200).json(arr);
+            
+                  
+                const results = paginatedResults(page, limit, arr);
+                return res.status(200).json(results)
             } else {
                 return res.status(400).json({ msg: "Folder is empty" });
             }
@@ -130,6 +144,37 @@ function getAllCategoryImg(req, res) {
         }
     })
 }
+
+
+
+// Get Paginated result
+function paginatedResults(page, limit, arr) {
+  
+        const startIndex = (page - 1) * limit;
+        const endIndex = page * limit;
+     
+        const results = {};
+      
+     
+        if (startIndex > 0) {
+          results.previous = {
+            page: page - 1,
+            limit: limit
+          };
+        }
+
+        if (endIndex < arr.length) {
+            results.next = {
+              page: page + 1,
+              limit: limit
+            };
+          }
+
+        results.results = arr.slice(startIndex, endIndex);
+
+      return results;
+
+  }
 
 
 

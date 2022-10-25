@@ -2,7 +2,7 @@ const multer = require('multer');
 const uploader = require('../../lib/multer');
 const path = require('path');
 
-const { uploadFile, bulkUpload, singleUpload, createImgGallery, getAllImg, getFiles, deleteFile, singleUploadCategory, bulkUploadCategory, getAllCategoryImg, deleteCategoryFile, headerBackground, singleUploadBlog, bulkUploadBlog } = require('./galleryController');
+const { uploadFile, bulkUpload, singleUpload, createImgGallery, getAllImg, getFiles, deleteFile, singleUploadCategory, bulkUploadCategory, getAllCategoryImg, deleteCategoryFile, headerBackground, singleUploadBlog, bulkUploadBlog, paginatedResults } = require('./galleryController');
 
 const galleryRouter = require('express').Router();
 
