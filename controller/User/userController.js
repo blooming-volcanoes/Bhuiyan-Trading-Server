@@ -210,16 +210,22 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
     let query = "select * from user where id=?"
 
     db.query(query, [data.id], (err, result) => {
-
+        query = "update user set ? where id=?";
         if (!err) {
 
-            console.log(result[0]);
-            query = "update user set ? where id=?";
-            if (req.body.password === result[0].password) {
+            if (req.body.name && !req.body.prevPassword) {
+                db.query(query, [req.body], (err, result) => {
+                    if (!err) {
+                        return res.status(200).json({ msg: "Your given input has updated sucessfully" });
+                    } else {
+                        return res.status(500).json(err);
+                    }
+                })
+            }else if (req.body.prevPassword === result[0].password) {
                 db.query(query, [req.body], (err, result) => {
                     if (!err) {
                         if (!result.affectedRows === 0) {
-                            return res.status(400).json({ msg: "Your posts id is incorrect" });
+                            return res.status(400).json({ msg: "Your user id is incorrect" });
                         }
                         return res.status(200).json({ msg: "Your given input has updated sucessfully" });
                     } else {
@@ -230,24 +236,11 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
                     }
                 })
             } else {
-
+                return res.status(400).json("err:Your password is incorrect");
             }
         } else {
-
+            return res.status(500).json(err);
         }
-        // if (!err) {
-        //     if (!result.affectedRows === 0) {
-        //         return res.status(400).json({ msg: "Your posts id is incorrect" });
-        //     }
-
-        //     return res.status(200).json({ msg: "Your given input has updated sucessfully" });
-        // } else {
-        //     if (err.errno === 1064) {
-
-        //         return res.status(500).json("err:Your input is empty");
-        //     }
-        //     return res.status(500).json(err);
-        // }
     })
 
 })
