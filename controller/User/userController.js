@@ -214,7 +214,7 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
         if (!err) {
 
             if (req.body.name && !req.body.prevPassword) {
-                db.query(query, [req.body], (err, result) => {
+                db.query(query, [req.body,data.id], (err, result) => {
                     if (!err) {
                         return res.status(200).json({ msg: "Your given input has updated sucessfully" });
                     } else {
@@ -222,7 +222,19 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
                     }
                 })
             }else if (req.body.prevPassword === result[0].password) {
-                db.query(query, [req.body], (err, result) => {
+                console.log(req.body)
+                if(req.body.name && req.body.currentPassword){
+                    req.body = {
+                        password: req.body.currentPassword,
+                        name: req.body.name
+                    }
+                }else if(req.body.currentPassword){
+                    req.body = {
+                        password: req.body.password,
+                    }
+                }
+               
+                db.query(query, [req.body, data.id], (err, result) => {
                     if (!err) {
                         if (!result.affectedRows === 0) {
                             return res.status(400).json({ msg: "Your user id is incorrect" });
