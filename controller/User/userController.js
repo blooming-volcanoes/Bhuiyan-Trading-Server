@@ -202,7 +202,34 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
 
 
 exports.updateUser = catchAsyncError(async (req, res, next) => { 
-    // 
+    const id = req.params.id;
+
+    query = "update user set ? where id=?";
+
+    db.query(query, [id], (err, result) => {
+
+        if(!err){
+
+            console.log(result[0]);
+
+        }else{
+
+        }
+        // if (!err) {
+        //     if (!result.affectedRows === 0) {
+        //         return res.status(400).json({ msg: "Your posts id is incorrect" });
+        //     }
+
+        //     return res.status(200).json({ msg: "Your given input has updated sucessfully" });
+        // } else {
+        //     if (err.errno === 1064) {
+
+        //         return res.status(500).json("err:Your input is empty");
+        //     }
+        //     return res.status(500).json(err);
+        // }
+    })
+
 })
 
 
