@@ -49,6 +49,14 @@ function updateHeader (req, res){
 }
 
 
+// Show brand name that are using the product
+
+function showBrand(){
+        const {name, logo} = req.body;
+        
+}
+
+
 
 module.exports = {
     DynamicHeader, 
