@@ -68,9 +68,8 @@ function sponsorBrand(req, res){
 
 
 function showBrand(req,res){
-    let query = "select * from brands where id=?";
-    const id = req.query.id;
-    db.query(query, [id], (err, result)=>{
+    let query = "select * from brands";
+    db.query(query, (err, result)=>{
         if(!err){
             if(result.length === 0){
                 return res.status(200).json({msg: "Data is not availabe"});
