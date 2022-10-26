@@ -67,8 +67,41 @@ function sponsorBrand(req, res){
 }
 
 
+function showBrand(req,res){
+    let query = "select * from brands where id=?";
+    const id = req.query.id;
+    db.query(query, [id], (err, result)=>{
+        if(!err){
+            if(result.length === 0){
+                return res.status(200).json({msg: "Data is not availabe"});
+            }
+            return res.status(200).json(result);
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+}
+
+function deleteBrand (req,res){
+    let query = "delete from brands where id=?";
+    const id = req.query.id;
+    db.query(query, [id], (err, result)=>{
+        if(!err){
+            if (!result.affectedRows === 0) {
+                return res.status(400).json({ msg: "Your id is incorrect" });
+            }
+
+            return res.status(200).json("Deletetion is successfull");
+        }else{
+            return res.status(500).json(err)
+        }
+    })
+}
+
 
 module.exports = {
+    deleteBrand,
+    showBrand,
     sponsorBrand,
     DynamicHeader, 
     updateHeader,
