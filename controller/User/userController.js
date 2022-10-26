@@ -230,7 +230,7 @@ exports.updateUser = catchAsyncError(async (req, res, next) => {
                     }
                 }else if(req.body.currentPassword){
                     req.body = {
-                        password: req.body.password,
+                        password: req.body.currentPassword,
                     }
                 }
                
