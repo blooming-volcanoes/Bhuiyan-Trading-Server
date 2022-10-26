@@ -2157,3 +2157,98 @@
 [2022-10-25T19:11:39.658] [DEBUG] default - Db connection successful
 [2022-10-25T20:02:08.570] [DEBUG] default - null err
 [2022-10-25T20:02:08.578] [DEBUG] default - Db connection successful
+[2022-10-26T15:55:14.481] [DEBUG] default - null err
+[2022-10-26T15:55:14.489] [DEBUG] default - Db connection successful
+[2022-10-26T15:55:57.873] [DEBUG] default - null [
+  {
+    email: 'sd@nicoimg.com',
+    password: '123456',
+    role: 'admin',
+    status: 'active',
+    name: 'hera',
+    id: 10
+  }
+] from login user
+[2022-10-26T15:55:57.875] [DEBUG] default - {
+  email: 'sd@nicoimg.com',
+  password: '123456',
+  role: 'admin',
+  status: 'active',
+  name: 'hera',
+  id: 10
+} from token
+[2022-10-26T15:55:57.879] [DEBUG] default - eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTAsImVtYWlsIjoic2RAbmljb2ltZy5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NjY3NzgxNTcsImV4cCI6MTY2Njg2NDU1N30.sReUq2lNMnB5yZ2LI6vuPkpcHjmqjQfNnOZKk51vL0Q identify jwt token
+[2022-10-26T15:58:37.803] [DEBUG] default - null err
+[2022-10-26T15:58:37.805] [DEBUG] default - Db connection successful
+[2022-10-26T15:58:52.603] [DEBUG] default - null err
+[2022-10-26T15:58:52.606] [DEBUG] default - Db connection successful
+[2022-10-26T15:59:07.388] [DEBUG] default - null err
+[2022-10-26T15:59:07.405] [DEBUG] default - Db connection successful
+[2022-10-26T15:59:12.619] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} is authenticated file
+[2022-10-26T15:59:12.620] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} req user
+[2022-10-26T15:59:51.797] [DEBUG] default - null err
+[2022-10-26T15:59:51.800] [DEBUG] default - Db connection successful
+[2022-10-26T15:59:55.264] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} is authenticated file
+[2022-10-26T15:59:55.265] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} req user
+[2022-10-26T16:00:24.224] [DEBUG] default - null err
+[2022-10-26T16:00:24.226] [DEBUG] default - Db connection successful
+[2022-10-26T16:00:35.648] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} is authenticated file
+[2022-10-26T16:00:35.649] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} req user
+[2022-10-26T16:00:47.195] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} is authenticated file
+[2022-10-26T16:00:47.195] [DEBUG] default - {
+  id: 10,
+  email: 'sd@nicoimg.com',
+  role: 'admin',
+  iat: 1666778157,
+  exp: 1666864557
+} req user
+[2022-10-26T16:01:50.577] [DEBUG] default - null err
+[2022-10-26T16:01:50.579] [DEBUG] default - Db connection successful
+[2022-10-26T16:02:05.193] [DEBUG] default - null err
+[2022-10-26T16:02:05.194] [DEBUG] default - Db connection successful
+[2022-10-26T16:02:15.261] [DEBUG] default - null err
+[2022-10-26T16:02:15.264] [DEBUG] default - Db connection successful
+[2022-10-26T16:02:27.337] [DEBUG] default - null err
+[2022-10-26T16:02:27.340] [DEBUG] default - Db connection successful

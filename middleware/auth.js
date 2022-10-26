@@ -21,9 +21,7 @@ exports.isAuthenticated = catchAsyncError(async (req, res, next) => {
 
     const decodeData = await jwt.verify(authorization, "secret");
     req.user = (decodeData);
-    logger.debug(req.user, "is authenticated file");
     if(req.user){
-        logger.debug(req.user,"req user");
         next();
     }
 });

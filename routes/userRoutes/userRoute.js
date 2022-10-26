@@ -13,7 +13,7 @@ router.route('/login').post(loginUser);
 router.route('/forgetPassword').post(forgetPassword);
 router.route('/changePassword').post(isAuthenticated,changePassword);
 router.route('/getUser').get(isAuthenticated, getUserDetails)
-router.route('/updateUer').put(isAuthenticated, updateUser)
+router.route('/updateUser/').put(isAuthenticated, updateUser)
 
 
 module.exports = router;
