@@ -1,3 +1,4 @@
+const { query } = require('../../db/connection');
 const db = require('../../db/connection');
 
 function DynamicHeader (req,res){
@@ -51,14 +52,24 @@ function updateHeader (req, res){
 
 // Show brand name that are using the product
 
-function showBrand(){
+function sponsorBrand(req, res){
         const {name, logo} = req.body;
-        
+
+       let query  = "insert into brands (name,logo) values (?,?)";
+       
+       db.query(query, [name, logo], (err, result)=>{
+            if(!err){
+                return res.status(200).json({msg: "Input has successfully stored"})
+            }else{
+                return res.status(500).json(err);
+            }
+       })
 }
 
 
 
 module.exports = {
+    sponsorBrand,
     DynamicHeader, 
     updateHeader,
     getHeader

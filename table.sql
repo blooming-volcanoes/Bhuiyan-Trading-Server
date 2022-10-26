@@ -97,3 +97,10 @@ create table contacts (
     productId varchar(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 )
+
+
+create table brands (
+         id INT AUTO_INCREMENT PRIMARY KEY,
+         name VARCHAR(255) NOT NULL,
+         logo text NOT NULL
+)
