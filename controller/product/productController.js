@@ -54,13 +54,13 @@ exports.getSingleProduct = catchAsyncError(async (req, res, next) => {
 
 exports.getProduct = catchAsyncError(async (req, res, next) => {
     var page = parseInt(req.query.page, 10) || 0;
-    var numPerPage = 1;
+    var numPerPage = 5;
     var skip = (page - 1) * numPerPage;
     var limit = skip + ',' + numPerPage;
     let query;
     if(skip >=0){
 
-     query = 'select * from products LIMIT ' + limit;
+     query = 'select * from products order by id desc LIMIT ' + limit;
     }else{
         query = 'select * from products'
     }
