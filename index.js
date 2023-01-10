@@ -26,11 +26,10 @@ const postRoute = require('./routes/postRoutes/postRoute');
 const headerRoute = require('./routes/headerRoutes/headerRoutes');
 const contactRoute = require('./routes/contactRoutes/contactRoutes');
 
-const log4js = require('log4js');
+
 const path = require('path');
 const upload = require('./lib/multer');
 const galleryRouter = require('./routes/galleryRoutes/galleryRoutes');
-const logger = log4js.getLogger();
 
 log4js.configure({
     appenders: { everything: { type: 'file', filename: 'logs.log' } },
@@ -62,7 +61,6 @@ const http = require('http').createServer(app);
 
 app.get('/', (req, res) => {
     res.send('hi');
-    logger.debug('odo');
   
 });
 
@@ -77,4 +75,3 @@ http.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });
 
-module.exports = logger;

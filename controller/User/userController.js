@@ -5,7 +5,6 @@ const bcrypt = require('bcrypt')
 const catchAsyncError = require('../../middleware/catchAsyncError');
 
 const log4js = require('log4js');
-const logger = log4js.getLogger();
 
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection');
@@ -31,7 +30,6 @@ exports.registerUser = (req, res, next) => {
     let query = "select email from user where email=?";
     try {
         db.query(query, [email], (err, result) => {
-            logger.debug(err, "oel", result, "from register user");
             if (!err) {
                 if (result.length > 0) {
                     return res.status(400).json({ msg: "Email already exist" })
@@ -73,7 +71,6 @@ exports.loginUser = catchAsyncError(async (req, res, next) => {
     let query = "select email, password, role, status,name, id from user where email=?";
 
     db.query(query, [email], (err, result) => {
-        logger.debug(err, result, "from login user");
         // let compare = 
         if (!err) {
             if (result.length <= 0) {
@@ -128,7 +125,6 @@ exports.forgetPassword = catchAsyncError(async (req, res, next) => {
     let user = req.body;
     let query = "select email, password from user where email=?"
 
-    logger.debug(process.env.EMAIL, process.env.PASS);
     db.query(query, [user.email], (err, result) => {
         if (!err) {
             if (result.length <= 0) {
@@ -167,7 +163,6 @@ exports.forgetPassword = catchAsyncError(async (req, res, next) => {
 /** Change Password */
 
 exports.changePassword = catchAsyncError(async (req, res, next) => {
-    logger.debug(req.user, "ofaload", "change password");
     const email = req.user.email;
     const { oldPass, newPass, confirmPass } = req.body;
     let query = "select * from user where email=?";
@@ -175,7 +170,6 @@ exports.changePassword = catchAsyncError(async (req, res, next) => {
     db.query(query, [email], (err, result) => {
         if (!err) {
             const passCompare = oldPass === result[0].password
-            logger.debug(result, passCompare, "change pass");
             if (!passCompare) {
                 return res.status(400).json({ msg: "Your old Password is incorrect" })
             } else if (passCompare) {

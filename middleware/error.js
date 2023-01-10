@@ -1,8 +1,6 @@
 /***
  * Catch most common error before crashing server show it to the user
  */
- const log4js = require('log4js');
- const logger = log4js.getLogger();
 
 const ErrorHandler = require("../lib/errorHandler");
 

@@ -8,7 +8,6 @@ const { getProductArr } = require('../../services/getArr');
 const { getCategoryByID } = require('./categoryController');
 const { default: axios } = require('axios');
 const { promise } = require('../../db/connection');
-const logger = log4js.getLogger();
 
 
 /** Create Product */
@@ -20,7 +19,6 @@ exports.createProduct = catchAsyncError(async (req, res, next) => {
 
     db.query(query, [title, price, currency, unit, shortDesc, productDesc, featureImg, gallaryImg, categoryId, categoryName, subCategoryName], (err, result) => {
         if (!err) {
-            logger.debug(result, "from create product");
             return res.status(200).json({ msg: "Product Added successfully" })
         } else {
             return res.status(500).json(err)

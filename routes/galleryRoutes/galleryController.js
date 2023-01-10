@@ -95,11 +95,17 @@ function getFiles(req, res) {
             if (files.length > 0) {
                 let arr = []
 
-                files.forEach(file => {
+              
+
+     files.sort(function(a, b) {
+               return fs.statSync(directoryPath+"/" + b).mtime.getTime() - 
+                      fs.statSync(directoryPath+"/" + a).mtime.getTime();
+           });
+ 
+           files.forEach(file => {
                     const url = `${HOST}/uploads/${file}`
                     arr.push(url);
                 })
-
 
              let results =  paginatedResults(page, limit,arr)
 
@@ -132,8 +138,7 @@ function getAllCategoryImg(req, res) {
                     const url = `${HOST}/category/${file}`
                     arr.push(url);
                 })
-            
-                  
+                  arr.sort((a,b)=> a-b);
                 const results = paginatedResults(page, limit, arr);
                 return res.status(200).json(results)
             } else {
