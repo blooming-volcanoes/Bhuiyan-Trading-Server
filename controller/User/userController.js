@@ -4,7 +4,6 @@ const nodemailer = require('nodemailer')
 const bcrypt = require('bcrypt')
 const catchAsyncError = require('../../middleware/catchAsyncError');
 
-const log4js = require('log4js');
 
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection');
@@ -34,7 +33,7 @@ exports.registerUser = (req, res, next) => {
                 if (result.length > 0) {
                     return res.status(400).json({ msg: "Email already exist" })
                 } else {
-                    query = "insert into user (name,email,contactNumber, password,status,role) values (?,?,?,?,'active','admin')";
+                    query = "insert into user (name,email,contactNumber, password,status,role) values (?,?,?,?,'active','user')";
 
                     db.query(query, [name, email, contactNumber, password], (err, result) => {
                         if (!err) {

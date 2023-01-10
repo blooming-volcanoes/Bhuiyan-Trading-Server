@@ -31,10 +31,6 @@ const path = require('path');
 const upload = require('./lib/multer');
 const galleryRouter = require('./routes/galleryRoutes/galleryRoutes');
 
-log4js.configure({
-    appenders: { everything: { type: 'file', filename: 'logs.log' } },
-    categories: { default: { appenders: ['everything'], level: 'ALL' } },
-});
 
 
 
@@ -72,6 +68,6 @@ app.get('/', (req, res) => {
 // app.use(errorMiddleware);
 
 http.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`Example app listening at ${process.env.HOST}`);
 });
 
