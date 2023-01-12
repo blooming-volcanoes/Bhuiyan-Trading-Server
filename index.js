@@ -24,7 +24,7 @@ const productRoute = require('./routes/productRoutes/productRoute');
 const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
 const postRoute = require('./routes/postRoutes/postRoute');
 const headerRoute = require('./routes/headerRoutes/headerRoutes');
-// const contactRoute = require('./routes/contactRoutes/contactRoute');
+const cRoute = require('./routes/contactRoutes/conRoute');
 
 
 const path = require('path');
@@ -50,7 +50,7 @@ app.use('/product', productRoute);
 app.use('/post', postRoute);
 app.use('/gallery', galleryRouter);
 app.use('/header', headerRoute);
-// app.use('/contact', contactRoute);
+app.use('/contact', cRoute);
 
 // Socket
 const http = require('http').createServer(app);
