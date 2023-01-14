@@ -6,7 +6,7 @@ const fs = require('fs');
 const directoryPath = path.join(__dirname, "..", "..", "storage", "uploads");
 const directoryPathCategory = path.join(__dirname, "..", "..", "storage", "category");
 
-const HOST = "https://api.bhuiyantrad.com"
+const HOST = "https://bhuiyan-trading-server-production.up.railway.app"
 
 
 // single upload image for product
