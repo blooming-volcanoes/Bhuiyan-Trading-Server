@@ -24,7 +24,7 @@ const productRoute = require('./routes/productRoutes/productRoute');
 const postCategoryRoute = require('./routes/postRoutes/postCategoryRoute');
 const postRoute = require('./routes/postRoutes/postRoute');
 const headerRoute = require('./routes/headerRoutes/headerRoutes');
-const cRoute = require('./routes/contactRoutes/conRoute');
+// const cRoute = require('./routes/contactRoutes/conRoute');
 
 
 const path = require('path');
