@@ -3,7 +3,6 @@ const catchAsyncError = require('../../middleware/catchAsyncError');
 const sendToken = require('../../lib/jwt.js');
 const db = require('../../db/connection')
 
-const log4js = require('log4js');
 const { getProductArr } = require('../../services/getArr');
 const { getCategoryByID } = require('./categoryController');
 const { default: axios } = require('axios');
@@ -135,7 +134,7 @@ exports.getByCategoryId = catchAsyncError((req, res, next) => {
             let newO=[];
             for(const result of getAll){
                 const id = (result.categoryId);
-                let getID = await axios.get(`http://localhost:5000/category/get/${id}`);
+                let getID = await axios.get(`https://bhuiyan-trading-server-production.up.railway.app/category/get/${id}`);
                 
 
                  newO.push(Object.assign(result, { categoryFeatureImg: getID.data[0].featureImg, categoryGallay: getID.data[0].galleryImg }))
