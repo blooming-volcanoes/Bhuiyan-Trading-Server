@@ -50,6 +50,7 @@ app.use('/product', productRoute);
 app.use('/post', postRoute);
 app.use('/gallery', galleryRouter);
 app.use('/header', headerRoute);
+
 // app.use('/contact', cRoute);
 
 // Socket
