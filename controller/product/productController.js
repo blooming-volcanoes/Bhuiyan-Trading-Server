@@ -134,7 +134,7 @@ exports.getByCategoryId = catchAsyncError((req, res, next) => {
             let newO=[];
             for(const result of getAll){
                 const id = (result.categoryId);
-                let getID = await axios.get(`https://bhuiyan-trading-server-production.up.railway.app/category/get/${id}`);
+                let getID = await axios.get(`https://bhuiyan-trade.onrender.com/category/get/${id}`);
                 
 
                  newO.push(Object.assign(result, { categoryFeatureImg: getID.data[0].featureImg, categoryGallay: getID.data[0].galleryImg }))
