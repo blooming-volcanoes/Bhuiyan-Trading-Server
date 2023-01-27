@@ -32,7 +32,7 @@ function updateHeader (req, res){
     if(!id){
         return res.status(400).json({ msg: "provide id to update" });
     }
-    query = "update header set ? where id=?";
+   let query = "update header set ? where id=?";
 
     db.query(query, [req.body, id], (err, result) => {
         if (!err) {
