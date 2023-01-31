@@ -116,7 +116,7 @@ exports.searchProduct = catchAsyncError(async (req, res, next) => {
 exports.getByCategoryId = catchAsyncError((req, res, next) => {
     const id = req.params.id
     var page = parseInt(req.query.page, 10) || 0;
-    var numPerPage = 1;
+    var numPerPage = 10;
     var skip = (page - 1) * numPerPage;
     var limit = skip + ',' + numPerPage;
 
