@@ -6,7 +6,7 @@
   "author": "<waqin21@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js",
+    "start": "node server.js",
     "start-dev": "nodemon index.js"
   },
   "dependencies": {
