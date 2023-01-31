@@ -153,7 +153,7 @@ exports.getBySubCategory = catchAsyncError(async (req, res, next) => {
     const { name } = req.params;
 
     var page = parseInt(req.query.page) || 0;
-    var numPerPage = 1;
+    var numPerPage = 10;
     var skip = (page - 1) * numPerPage;
     var limit = skip + ',' + numPerPage;
 
